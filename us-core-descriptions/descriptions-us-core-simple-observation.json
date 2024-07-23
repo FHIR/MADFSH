@@ -1,0 +1,11 @@
+{
+    "Observation.status": "a status",
+    "Observation.category": "a category code",
+    "Observation.code": "a code",
+    "Observation.subject": "a patient",
+    "Observation.effective": "a time indicating when the observation was made",
+    "Observation.performer": "who answered the questions",
+    "Observation.value": "a value",
+    "Observation.category:us-core": "a classification of the type of observation",
+    "Observation.value[x]:valueCodeableConcept": "a code representing the observed value"
+}

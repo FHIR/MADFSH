@@ -1,0 +1,46 @@
+{
+    "projectName": "<PROJECTNAME>",
+    "inputRoot": "<INPUTROOT>",
+    "outputRoot": "<OUTPUTROOT>",
+    "inputFileList": [],
+    "remoteProfile": true,
+    "profileURLReplace": [
+        {
+            "source": "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-condition",
+            "target": "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-condition-problems-health-concerns"
+        },
+        {
+            "source": "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-mednotrequested",
+            "target": "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-medicationnotrequested"
+        },
+        {
+            "source": "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observationnotdone",
+            "target": "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observationcancelled"
+        },
+        {
+            "source": "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observation",
+            "target": "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-simple-observation"
+        },
+        {
+            "source": "http://hl7.org/fhir/StructureDefinition/bmi",
+            "target": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-bmi"
+        },
+        {
+            "source": "http://hl7.org/fhir/StructureDefinition/bp",
+            "target": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-blood-pressure"
+        },
+        {
+            "source": "http://hl7.org/fhir/StructureDefinition/heartrate",
+            "target": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-heart-rate"
+        }
+    ],
+    "measureExtensionURL": "http://hl7.org/fhir/us/measureset/StructureDefinition/used-by-measures",
+    "measureLinkFile": "src/narrative-mappings/measure-link.json",
+    "valueSetDetails": [],
+    "codeDetails": [],
+    "elementDetailOverrides": [],
+    "createDataReqJSON": false,
+    "exampleInputFolder": "examples/",
+    "exampleOutputFolder": "input/examples/",
+    "exampleMarkdownFile": "3_examples.md"
+}

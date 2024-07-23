@@ -1,0 +1,45 @@
+{
+    "inputRoot": "measure_input",
+    "inputFileList": ["CMS2_bundle.json", "CMS69_bundle.json"],
+    "projectName": "MeasureSet",
+    "remoteProfile": true,
+    "profileURLReplace": [
+        {
+            "source": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-heartrate",
+            "target": "https://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-heart-rate.json"
+        },
+        {
+            "source": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-bloodpressure",
+            "target": "https://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-blood-pressure.json"
+        },
+        {
+            "source": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-laboratoryresultobservation",
+            "target": "http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-observation-lab.json"
+        },
+        {
+            "source": "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-condition",
+            "target": "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-condition-problems-health-concerns"
+        },
+        {
+            "source": "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-mednotrequested",
+            "target": "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-medicationnotrequested"
+        },
+        {
+            "source": "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observationnotdone",
+            "target": "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observationcancelled"
+        },
+        {
+            "source": "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observation",
+            "target": "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-simple-observation"
+        }
+    ],
+    "measureExtensionURL": "http://hl7.org/fhir/us/measureset/StructureDefinition/used-by-measures",
+    "measureLinkFile": "src/narrative-mappings/measure-link.json",
+    "valueSetDetails": [],
+    "codeDetails": [],
+    "elementDetailOverrides": [],
+    "createDataReqJSON": false,
+    "exampleInputFolder": "examples/",
+    "exampleOutputFolder": "input/examples/",
+    "exampleMarkdownFile": "3_example.md"
+}

@@ -1,0 +1,9 @@
+{
+    "Location.name": "A name",
+    "Location.identifier": "Location or facility identifier",
+    "Location.status": "A status (whether in use)",
+    "Location.type": "The type of location or facility",
+    "Location.telecom": "Contact details of the location",
+    "Location.address": "A Location address",
+    "Location.managingOrganization": "The managing organization"
+}

@@ -1,0 +1,7 @@
+{
+    "Patient.identifier": "a patient identifier (e.g. MRN)",
+    "Patient.name": "a patient name",
+    "Patient.gender": "a gender",
+    "Patient.birthDate": "a birth date",
+    "Patient.address": "an address"
+}

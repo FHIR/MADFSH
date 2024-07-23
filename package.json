@@ -1,0 +1,45 @@
+{
+    "name": "nodets",
+    "version": "1.0.0",
+    "description": "",
+    "main": "app.js",
+    "scripts": {
+        "create-narrative-mapping": "ts-node ./src/scripts/createNarrativeMapping.ts",
+        "lint": "eslint \"./src/**/*.{js,ts}\"",
+        "lint:fix": "eslint \"./src/**/*.{js,ts}\" --fix",
+        "prettier-format": "prettier --config .prettierrc 'src/**/*.ts' --write",
+        "start:build": "tsc -w",
+        "start:run": "nodemon build/app.js",
+        "start": "concurrently npm:start:*"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "@types/node": "^20.12.7",
+        "@typescript-eslint/eslint-plugin": "^6.10.0",
+        "@typescript-eslint/parser": "^6.10.0",
+        "eslint": "^8.53.0",
+        "eslint-config-prettier": "^9.0.0",
+        "prettier": "^3.0.3",
+        "typescript": "^5.2.2"
+    },
+    "dependencies": {
+        "@ahryman40k/ts-fhir-types": "^4.0.39",
+        "@angular/common": "^16.2.10",
+        "@types/fhir": "^0.0.37",
+        "axios": "^1.6.2",
+        "commander": "^11.1.0",
+        "fhir-package-loader": "^1.0.0",
+        "fp-ts": "^2.16.1",
+        "fs": "^0.0.1-security",
+        "httprequest": "^0.3.0",
+        "node-fetch": "^3.3.2",
+        "path": "^0.12.7",
+        "sync-request": "^6.1.0",
+        "ts-node": "^10.9.2",
+        "ts-sync-request": "^1.4.1",
+        "winston": "^3.11.0",
+        "yaml": "^2.3.4"
+    }
+}

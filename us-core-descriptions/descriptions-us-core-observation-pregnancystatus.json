@@ -1,0 +1,8 @@
+{
+    "Observation.status": "a status",
+    "Observation.code": "a code for pregnancy status observation",
+    "Observation.subject": "a patient",
+    "Observation.effectiveDateTime": "when the observation occurred",
+    "Observation.valueCodeableConcept": "the pregnancy status",
+    "Observation.category": "a category code of 'social-history'"
+}

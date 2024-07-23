@@ -1,0 +1,9 @@
+{
+    "ServiceRequest.reasonCode": "Explanation/Justification for procedure or service",
+    "ServiceRequest.category:us-core": "Classification of service",
+    "ServiceRequest.doNotPerform": "True if service/procedure should not be performed",
+    "ServiceRequest.modifierExtension:isElective": "If true, this element marks the specified request as elective.",
+    "ServiceRequest.reasonReference": "Explanation/Justification for service or service",
+    "ServiceRequest.bodySite": "Anatomic location where the procedure should be performed. This is the target site.",
+    "ServiceRequest.extension:reasonRefused": "reason the service was not performed"
+}

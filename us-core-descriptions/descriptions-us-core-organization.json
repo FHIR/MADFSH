@@ -1,0 +1,7 @@
+{
+    "Organization.active": "A status of the organization (i.e., whether is still active",
+    "Organization.name": "A name",
+    "Organization.identifier": "An identifier",
+    "Organization.telecom": "A list of contact information",
+    "Organization.address": "An address"
+}

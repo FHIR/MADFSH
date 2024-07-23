@@ -1,0 +1,20 @@
+{
+    "Patient.extension:race": "a race",
+    "Patient.extension:ethnicity": "an ethnicity",
+    "Patient.telecom": "a contact detail for the individual",
+    "Patient.deceased": "indicates if the individual is deceased or not",
+    "Patient.extension:birthTime": "time of birth",
+    "Patient.identifier.system": "the namespace for the identifier value",
+    "Patient.identifier.value": "a unique identifier number within the system",
+    "Patient.name.family": "patient's family name",
+    "Patient.name.given": "patient's given name",
+    "Patient.telecom.system": "telecommunications form for contact point.",
+    "Patient.telecom.value": "the actual contact point details",
+    "Patient.telecom.use": "purpose of the contact point (e.g. home, work)",
+    "Patient.address.line": "Street name, number, direction & P.O. Box etc.",
+    "Patient.address.city": "Name of city, town etc.",
+    "Patient.address.state": "Sub-unit of country (abbreviations ok)",
+    "Patient.address.postalCode": "US Zip Code",
+    "Patient.address.period": "Time period address is in use",
+    "Patient.communication.language": "preferred communication language"
+}

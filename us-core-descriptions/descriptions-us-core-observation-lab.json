@@ -1,0 +1,8 @@
+{
+    "Observation.category": "a category code of 'laboratory",
+    "Observation.code": "a laboratory LOINC code, if available, which tells you what is being measured",
+    "Observation.value": "a result value * if the result value is a numeric quantity, a standard UCUM unity * if the result value is a coded quantity, a standard SNOMED CT",
+    "Observation.interpretation": "result interpretation",
+    "Observation.referenceRange": "result reference range",
+    "Observation.specimen": "a specimen type (e.g., blood, serum, urine)"
+}

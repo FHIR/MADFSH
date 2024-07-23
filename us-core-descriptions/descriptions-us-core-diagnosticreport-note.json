@@ -1,0 +1,13 @@
+{
+    "DiagnosticReport.status": "a status",
+    "DiagnosticReport.category": "a category",
+    "DiagnosticReport.code": "a code describing the type of report",
+    "DiagnosticReport.subject": "a patient",
+    "DiagnosticReport.effective": "the diagnostically relevant time (known as the 'effective time' and typically the time of the procedure)",
+    "DiagnosticReport.issued": "instant the report was released",
+    "DiagnosticReport.encounter": "the encounter the report occurred within",
+    "DiagnosticReport.performer": "an author (actor) producing the report",
+    "DiagnosticReport.result": "a reference to one or more test results",
+    "DiagnosticReport.media": "a reference to one or more images",
+    "DiagnosticReport.presentedForm": "a reference to the full report (presentedForm)"
+}

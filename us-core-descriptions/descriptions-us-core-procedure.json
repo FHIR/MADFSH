@@ -1,0 +1,7 @@
+{
+    "Procedure.status": "a status",
+    "Procedure.code": "a code that identifies the type of procedure performed on the patient",
+    "Procedure.subject": "a patient",
+    "Procedure.performed": "when the procedure was performed",
+    "Procedure.encounter": "the encounter associated with the procedure"
+}

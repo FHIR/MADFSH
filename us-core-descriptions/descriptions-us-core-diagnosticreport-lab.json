@@ -1,0 +1,11 @@
+{
+    "DiagnosticReport.status": "a status",
+    "DiagnosticReport.category": "a category code of 'LAB",
+    "DiagnosticReport.code": "a code (preferably a LOINC code) which tells you what is being measured",
+    "DiagnosticReport.subject": "a patient",
+    "DiagnosticReport.effective": "the diagnostically relevant time (known as the 'effective time' and typically the time of specimen collection)",
+    "DiagnosticReport.issued": "when the report was released",
+    "DiagnosticReport.encounter": "encounter associated with the DiagnosticReport",
+    "DiagnosticReport.performer": "who issues the report",
+    "DiagnosticReport.result": "a result"
+}

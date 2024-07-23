@@ -1,0 +1,5 @@
+{
+    "Observation.subject": "a patient",
+    "Observation.code": "a fixed code for pediatric BMI per age and gender measurement",
+    "Observation.valueQuantity": "a result value"
+}

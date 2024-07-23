@@ -1,0 +1,6 @@
+{
+    "Practitioner.identifier": "An identifier which Must Support an NPI if available",
+    "Practitioner.name": "A name",
+    "Practitioner.telecom": "Contact information",
+    "Practitioner.address": "An address"
+}

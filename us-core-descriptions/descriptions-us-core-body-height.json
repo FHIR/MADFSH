@@ -1,0 +1,5 @@
+{
+    "Observation.subject": "a patient",
+    "Observation.code": "a fixed code for body height",
+    "Observation.value": "a result value"
+}

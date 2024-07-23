@@ -1,0 +1,7 @@
+{
+    "Goal.lifecycleStatus": "a status",
+    "Goal.description": "text description of the goal",
+    "Goal.subject": "a patient",
+    "Goal.start": "when goal pursuit began",
+    "Goal.target": "target date(s)"
+}

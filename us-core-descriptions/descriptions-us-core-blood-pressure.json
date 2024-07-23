@@ -1,0 +1,8 @@
+{
+    "Observation.code": "a fixed code for systolic and diastolic blood pressure panel",
+    "Observation.component:systolic.code": "a fixed component code for systolic blood pressure",
+    "Observation.component:diastolic.code": "a fixed component code for diastolic blood pressure",
+    "Observation.component:systolic.value": "a result value for systolic blood pressure",
+    "Observation.component:diastolic.value": "a result value for diastolic blood pressure",
+    "Observation.status": "status of the blood pressure result (e.g., preliminary, final)"
+}

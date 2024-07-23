@@ -1,0 +1,47 @@
+# ╭─────────────────────────────────ImplementationGuide-fish.json──────────────────────────────────╮
+# │  The properties below are used to create the ImplementationGuide resource. For a list of       │
+# │  supported properties, see:                                                                    │
+# │  https://fshschool.org/docs/sushi/configuration/#full-configuration                            │
+# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+id: hl7.fhir.us.measureset
+canonical: http://hl7.org/fhir/us/measureset
+version: 0.1.0
+name: MeasureSetImplementationGuide
+title: Measure Set-Based Implementation Guide
+status: draft
+publisher: Jaehoon Lee
+contact:
+    - name: Jaehoon Lee
+      telecom:
+          - system: email
+            value: mailto:jaehoonlee@mitre.org
+description: This IG describes the data content and representation requirements for a specific set of quality measures.
+license: CC0-1.0
+fhirVersion: 4.0.1
+parameters:
+    apply-publisher: true
+    apply-contact: true
+    show-inherited-invariants: false
+copyrightYear: 2020+
+releaseLabel: ci-build
+dependencies:
+    hl7.fhir.us.qicore:
+        id: qicore
+        uri: http://hl7.org/fhir/us/qicore/ImplementationGuide/hl7.fhir.us.qicore
+        version: 6.0.0
+    hl7.fhir.us.core:
+        id: uscore
+        uri: http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core
+        version: 6.1.0
+    hl7.fhir.us.cqfmeasures: 4.0.0
+jurisdiction: urn:iso:std:iso:3166#US "United States of America"
+
+# ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
+# │  To use a provided input/includes/menu.xml file, delete the "menu" property below.             │
+# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+menu:
+    Home: index.html
+    Profiles: 1_profiles.html
+    Data Elements: 2_data_elements.html
+    Example: 3_example.html
+    Downloads: 4_downloads.html

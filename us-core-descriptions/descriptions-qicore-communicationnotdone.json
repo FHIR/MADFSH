@@ -1,0 +1,8 @@
+{
+    "Communication.status": "a status identifying the lifecycle stage of the communication event with a fixed value of Not Done",
+    "Communication.statusReason": "the reason the communication was not done",
+    "Communication.reasonCode": "the reason for the communication",
+    "Communication.extension:recorded":"recorded date of not done event",
+    "Communication.subject":"a patient",
+    "Communication.topic":"topic of message"
+}

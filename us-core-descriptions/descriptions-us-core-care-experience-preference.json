@@ -1,0 +1,8 @@
+{
+    "Observation.status": "a status",
+    "Observation.code": "a fixed code for care experience preference",
+    "Observation.subject": "a patient",
+    "Observation.category": "a category code of 'care-experience-preference'",
+    "Observation.effective": "a time indicating when the preference was made",
+    "Observation.value": "treatment intervention preference value"
+}

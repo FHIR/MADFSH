@@ -1,0 +1,7 @@
+{
+    "Observation.status": "a status",
+    "Observation.code": "a fixed code for sexual orientation",
+    "Observation.subject": "a patient",
+    "Observation.effective": "a time indicating when the observation was made",
+    "Observation.valueCodeableConcept": "a sexual orientation value"
+}

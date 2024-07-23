@@ -1,0 +1,12 @@
+{
+    "Observation.status": "a status",
+    "Observation.category": "a category code",
+    "Observation.code": "a code indicating the observation that was cancelled",
+    "Observation.subject": "a patient",
+    "Observation.effective": "a time or period covered by this decision",
+    "Observation.performer": "who answered the questions",
+    "Observation.value": "a value",
+    "Observation.issued": "when the decision to cancel the observation was made",
+    "Observation.extension:notDoneReason": "why the observation was cancelled",
+    "Observation.encounter": "the encounter relevant to the cancelled observation"
+}

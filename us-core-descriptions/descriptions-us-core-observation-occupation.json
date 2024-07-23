@@ -1,0 +1,10 @@
+{
+    "Observation.status": "a status",
+    "Observation.code": "a code for job history",
+    "Observation.subject": "a patient",
+    "Observation.valueCodeableConcept": "the job code or text",
+    "Observation.category": "a category code of 'social-history",
+    "Observation.effectivePeriod": "when the job occurred",
+    "Observation.component.code": "a code for the job history industry",
+    "Observation.component.valueCodeableConcept": "the industry code or text"
+}

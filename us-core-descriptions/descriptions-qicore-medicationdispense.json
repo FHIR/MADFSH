@@ -1,0 +1,13 @@
+{
+    "MedicationDispense.status": "a status (e.g., dispensed, not dispensed)",
+    "MedicationDispense.medication": "a medication",
+    "MedicationDispense.subject": "a patient",
+    "MedicationDispense.context": "the encounter associated with the dispense",
+    "MedicationDispense.performer": "who dispensed the medication",
+    "MedicationDispense.authorizingPrescription": "the authorizing prescription",
+    "MedicationDispense.type": "type of dispense (e.g., partially dispensed)",
+    "MedicationDispense.quantity": "the quantity dispensed",
+    "MedicationDispense.whenHandedOver": "a date for when dispensed to the patient",
+    "MedicationDispense.dosageInstruction": "free text dosage instructions (the SIG)",
+    "MedicationDispense.dosageInstruction.doseAndRate": "the dose and rate"
+}

@@ -1,0 +1,9 @@
+{
+    "PractitionerRole.organization": "An associated organization",
+    "PractitionerRole.practitioner": "An associated practitioner",
+    "PractitionerRole.code": "A role",
+    "PractitionerRole.specialty": "A specialty",
+    "PractitionerRole.location": "An associated location",
+    "PractitionerRole.telecom": "Contact information",
+    "PractitionerRole.endpoint": "A communication endpoint"
+}

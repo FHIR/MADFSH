@@ -1,0 +1,9 @@
+{
+    "AllergyIntolerance.onset": "when the allergy or intolerance was identified",
+    "AllergyIntolerance.type": "type of underlying physiological mechanism",
+    "AllergyIntolerance.category": "a category code for source of allergy or intolerance",
+    "AllergyIntolerance.criticality": "a code estimating potential clinical harm or seriousness of reaction",
+    "AllergyIntolerance.reaction": "the adverse reaction event linked to exposure to the substance",
+    "AllergyIntolerance.encounter": "The encounter when the allergy or intolerance was asserted.",
+    "AllergyIntolerance.recordedDate": "when this particular AllergyIntolerance record was created in the system, which is often a system-generated date."
+}

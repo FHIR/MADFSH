@@ -1,0 +1,14 @@
+{
+    "Observation.status": "a status",
+    "Observation.category": [
+      "a category code of 'survey'",
+      "additional categories that further specify the assessment or screening"
+    ],
+    "Observation.code": "a LOINC code, if available, which tells you the survey question",
+    "Observation.subject": "a patient",
+    "Observation.effective": "a time indicating when the survey was taken",
+    "Observation.dataAbsentReason": "the answer or a reason why the data is absent * if the result value is a numeric quantity and coded quantity units are used, UCUM is required.",
+    "Observation.performer": "who answered the questions",
+    "Observation.derivedFrom": "related questionnaire responses or observations that this observation is made from",
+    "Observation.value": "reference to observations that make up this observation"
+}

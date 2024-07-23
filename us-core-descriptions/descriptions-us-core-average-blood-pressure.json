@@ -1,0 +1,9 @@
+{
+    "Observation.subject": "a patient",
+    "Observation.code": "a fixed code for average systolic and average diastolic blood pressure panel",
+    "Observation.effective": "a clinically relevant time-period for the average of blood pressure (BP) readings",
+    "Observation.component:systolic.code": "a fixed *component* code for average systolic blood pressure",
+    "Observation.component:diastolic.code": "a fixed *component* code for average diastolic blood pressure",
+    "Observation.component:systolic.value": "a result value for average systolic blood pressure",
+    "Observation.component:diastolic.value": "a result value for average diastolic blood pressure"
+}

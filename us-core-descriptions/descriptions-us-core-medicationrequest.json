@@ -1,0 +1,14 @@
+{
+    "MedicationRequest.status": "a status",
+    "MedicationRequest.intent": "an intent code",
+    "MedicationRequest.medication": "a medication to be taken",
+    "MedicationRequest.subject": "a patient",
+    "MedicationRequest.category": "the category (e.g., Discharge Medication)",
+    "MedicationRequest.reported": "the `reported` flag or reference signaling that information is from a secondary source such as a patient",
+    "MedicationRequest.encounter": "the encounters",
+    "MedicationRequest.requester": "a prescriber",
+    "MedicationRequest.authoredOn": "a date for when written",
+    "MedicationRequest.reasonCode": "the prescription Sig",
+    "MedicationRequest.dispenseRequest": "the amount dispensed and number of refills",
+    "MedicationRequest.dosageInstruction.doseAndRate": "the dose and rate"
+}

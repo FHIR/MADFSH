@@ -1,0 +1,10 @@
+{
+    "Coverage.identifier": "health insurance member identifier or subscriber id",
+    "Coverage.status": "a status",
+    "Coverage.beneficiary": "the health insurance beneficiary (patient)",
+    "Coverage.relationship": "beneficiary's relationship to the subscriber",
+    "Coverage.subscriberId": "the health insurance issuer (payer)",
+    "Coverage.type": "health insurance coverage type (e.g., Medicare)",
+    "Coverage.period": "coverage start and/or end date",
+    "Coverage.class": "health insurance group and/or plan"
+}

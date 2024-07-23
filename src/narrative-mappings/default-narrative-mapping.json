@@ -1,0 +1,741 @@
+{
+  "bmi": {
+    "Observation.code": "a fixed code for body mass index (BMI)",
+    "Observation.valueQuantity": "a result value",
+    "Observation.subject": "a patient",
+    "Observation.value": "a result value",
+    "Observation.status": "status of the result (e.g., preliminary, final)",
+    "Observation.effective": "date and time of bmi observation",
+    "Observation.category": "codes for high level observation categories - vital signs",
+    "Observation.category:VSCat": "codes for high level observation categories - vital signs",
+    "Observation.value[x]:valueQuantity": "vital sign component value",
+    "Observation.dataAbsentReason": "why the result is missing",
+    "Observation.component": "component observation"
+  },
+  "bodyheight": {
+    "Observation.code": "a fixed code for height",
+    "Observation.valueQuantity": "a result value",
+    "Observation.value": "a result value",
+    "Observation.status": "status of the result (e.g., preliminary, final)",
+    "Observation.category": "codes for high level observation categories - vital signs",
+    "Observation.category:VSCat": "codes for high level observation categories - vital signs",
+    "Observation.subject": "a patient",
+    "Observation.value[x]:valueQuantity": "vital sign component value",
+    "Observation.dataAbsentReason": "why the result is missing",
+    "Observation.component": "component observation"
+  },
+  "bodytemp": {
+    "Observation.code": "a fixed code for body temperature",
+    "Observation.valueQuantity": "a result value",
+    "Observation.value": "a result value",
+    "Observation.status": "status of the result (e.g., preliminary, final)",
+    "Observation.category": "codes for high level observation categories - vital signs",
+    "Observation.category:VSCat": "codes for high level observation categories - vital signs",
+    "Observation.subject": "a patient",
+    "Observation.value[x]:valueQuantity": "vital sign component value",
+    "Observation.dataAbsentReason": "why the result is missing",
+    "Observation.component": "component observation"
+  },
+  "bodyweight": {
+    "Observation.code": "a fixed code for weight",
+    "Observation.valueQuantity": "a result value",
+    "Observation.value": "a result value",
+    "Observation.status": "status of the result (e.g., preliminary, final)",
+    "Observation.category": "codes for high level observation categories - vital signs",
+    "Observation.category:VSCat": "codes for high level observation categories - vital signs",
+    "Observation.subject": "a patient",
+    "Observation.value[x]:valueQuantity": "vital sign component value",
+    "Observation.dataAbsentReason": "why the result is missing",
+    "Observation.component": "component observation"
+  },
+  "bp": {
+    "Observation.code": "a fixed code for systolic and diastolic blood pressure panel",
+    "Observation.component:systolic.code": "a fixed component code for systolic blood pressure",
+    "Observation.component:diastolic.code": "a fixed component code for diastolic blood pressure",
+    "Observation.component:SystolicBP": "a fixed component code for systolic blood pressure",
+    "Observation.component:DiastolicBP": "a result value for diastolic blood pressure",
+    "Observation.status": "status of the blood pressure result (e.g., preliminary, final)",
+    "Observation.dataAbsentReason": "why the result is missing",
+    "Observation.effective": "date and time of bp observation",
+    "Observation.component": "component observation",
+    "Observation.encounter": "the healthcare event during which the observation is made",
+    "Observation.category": "codes for high level observation categories - vital signs",
+    "Observation.category:VSCat": "codes for high level observation categories - vital signs",
+    "Observation.subject": "a patient",
+    "Observation.value": "a result value",
+    "Observation.value[x]:valueQuantity": "vital sign component value"
+  },
+  "head-occipital-frontal-circumference-percentile": {
+    "Observation.subject": "a patient",
+    "Observation.code": "a fixed code for head occipital frontal circumference percentile measurement",
+    "Observation.valueQuantity": "a result value"
+  },
+  "headcircum": {
+    "Observation.code": "a fixed code for head circumference",
+    "Observation.valueQuantity": "a result value",
+    "Observation.value": "a result value",
+    "Observation.status": "status of the result (e.g., preliminary, final)",
+    "Observation.category": "codes for high level observation categories - vital signs",
+    "Observation.category:VSCat": "codes for high level observation categories - vital signs",
+    "Observation.subject": "a patient",
+    "Observation.value[x]:valueQuantity": "vital sign component value",
+    "Observation.dataAbsentReason": "why the result is missing",
+    "Observation.component": "component observation"
+  },
+  "heartrate": {
+    "Observation.code": "a fixed code for heart rate",
+    "Observation.valueQuantity": "a result value",
+    "Observation.value": "a result value",
+    "Observation.status": "status of the result (e.g., preliminary, final)",
+    "Observation.category": "codes for high level observation categories - vital signs",
+    "Observation.category:VSCat": "codes for high level observation categories - vital signs",
+    "Observation.subject": "a patient",
+    "Observation.value[x]:valueQuantity": "vital sign component value",
+    "Observation.dataAbsentReason": "why the result is missing",
+    "Observation.component": "component observation"
+  },
+  "oxygensat": {
+    "Observation.code": "a fixed code for oxygen saturation",
+    "Observation.valueQuantity": "a result value",
+    "Observation.value": "a result value",
+    "Observation.status": "status of the result (e.g., preliminary, final)",
+    "Observation.category": "codes for high level observation categories - vital signs",
+    "Observation.category:VSCat": "codes for high level observation categories - vital signs",
+    "Observation.subject": "a patient",
+    "Observation.value[x]:valueQuantity": "vital sign component value",
+    "Observation.dataAbsentReason": "why the result is missing",
+    "Observation.component": "component observation"
+  },
+  "pediatric-bmi-for-age": {
+    "Observation.subject": "a patient",
+    "Observation.code": "a fixed code for pediatric BMI per age and gender measurement",
+    "Observation.valueQuantity": "a result value"
+  },
+  "pediatric-weight-for-height": {
+    "Observation.subject": "a patient",
+    "Observation.code": "a fixed code for pediatric weight for height and age measurement",
+    "Observation.valueQuantity": "a result value"
+  },
+  "qicore-adverseevent": {
+    "AdverseEvent.actuality": "Overall nature of the adverse event, e.g. real or potential",
+    "AdverseEvent.category": "Overall categorization of the event, e.g. product-related or situational.",
+    "AdverseEvent.recordedDate": "When the event was recorded",
+    "AdverseEvent.event": "a code representing the type of event",
+    "AdverseEvent.subject": "a patient",
+    "AdverseEvent.encounter": "relevant encounter",
+    "AdverseEvent.resultingCondition": "Effect on the subject due to this event"
+  },
+  "qicore-allergyintolerance": {
+    "AllergyIntolerance.onset": "when the allergy or intolerance was identified",
+    "AllergyIntolerance.type": "type of underlying physiological mechanism",
+    "AllergyIntolerance.category": "a category code for source of allergy or intolerance",
+    "AllergyIntolerance.criticality": "a code estimating potential clinical harm or seriousness of reaction",
+    "AllergyIntolerance.reaction": "the adverse reaction event linked to exposure to the substance",
+    "AllergyIntolerance.encounter": "The encounter when the allergy or intolerance was asserted.",
+    "AllergyIntolerance.recordedDate": "when this particular AllergyIntolerance record was created in the system, which is often a system-generated date."
+  },
+  "qicore-communication": {
+    "Communication.status": "a status identifying the lifecycle stage fo the communication event",
+    "Communication.sent": "the time when this communication was sent.",
+    "Communication.reasonCode": "the reason for the communication",
+    "Communication.statusReason": "the reason for the current state of communication - generally only used for exception statuses",
+    "Communication.category": "code for general categories of communications (e.g., alerts, instructions)",
+    "Communication.medium": "channel of message communication",
+    "Communication.subject": "a patient",
+    "Communication.topic": "topic of message",
+    "Communication.encounter": "when message sent",
+    "Communication.received": "when message received",
+    "Communication.recipient": "message recipient",
+    "Communication.sender": "message sender"
+  },
+  "qicore-communicationnotdone": {
+    "Communication.status": "a status identifying the lifecycle stage of the communication event with a fixed value of Not Done",
+    "Communication.statusReason": "the reason the communication was not done",
+    "Communication.reasonCode": "the reason for the communication",
+    "Communication.extension:recorded": "recorded date of not done event",
+    "Communication.subject": "a patient",
+    "Communication.topic": "topic of message"
+  },
+  "qicore-condition-problems-health-concerns": {
+    "Condition.category": "a category code of 'problem-list-item' or 'health-concern",
+    "Condition.extension:extension:assertedDate": "date the condition was first asserted",
+    "Condition.severity": "Subjective severity of condition",
+    "Condition.extension:assertedDate": "date the condition was first asserted",
+    "Condition.category:sdoh": "sdoh category of the condition",
+    "Condition.bodySite": "Anatomical location, if relevant",
+    "Condition.stage": "stage of the condition"
+  },
+  "qicore-coverage": {
+    "Coverage.identifier": "health insurance member identifier or subscriber id",
+    "Coverage.status": "a status",
+    "Coverage.beneficiary": "the health insurance beneficiary (patient)",
+    "Coverage.relationship": "beneficiary's relationship to the subscriber",
+    "Coverage.subscriberId": "the health insurance issuer (payer)",
+    "Coverage.type": "health insurance coverage type (e.g., Medicare)",
+    "Coverage.period": "coverage start and/or end date",
+    "Coverage.class": "health insurance group and/or plan",
+    "Coverage.identifier:memberid": "Member ID",
+    "Coverage.payor": "issuer of the policy",
+    "Coverage.class:group": "health insurance group",
+    "Coverage.class:plan": "health insurance plan",
+    "Coverage.policyHolder": "coverage policy holder",
+    "Coverage.order": "The order of applicability of this coverage relative to other coverages which are currently in force.",
+    "Coverage.contract": "The policy(s) which constitute this insurance coverage."
+  },
+  "qicore-devicerequest": {
+    "DeviceRequest.status": "a status of a patient requesting a medical device (e.g., active, on-hold)",
+    "DeviceRequest.intent": "code indicating the degree of authority/intentionality associated with the request",
+    "DeviceRequest.code": "Code for what medical device is being requested/ordered",
+    "DeviceRequest.authoredOn": "when the request transitioned to being actionable",
+    "DeviceRequest.modifierExtension:doNotPerform": "true if request is do not perform",
+    "DeviceRequest.identifier": "business identifier",
+    "DeviceRequest.subject": "a patient",
+    "DeviceRequest.encounter": "relevant encounter to the request",
+    "DeviceRequest.occurrence": "time or schedule of request",
+    "DeviceRequest.requester": "who/what is requesting the device",
+    "DeviceRequest.performer": "who/what is performing the request",
+    "DeviceRequest.reasonReference": "reason for request"
+  },
+  "qicore-encounter": {
+    "Encounter.serviceProvider": "The organization (facility) responsible for this encounter",
+    "Encounter.diagnosis": "The list of diagnosis relevant to this encounter",
+    "Encounter.priority": "Indicates the urgency of the encounter",
+    "Encounter.length": "Actual quantity of time the encounter lasted (less time absent)",
+    "Encounter.hospitalization": "Details about the admission to a healthcare service",
+    "Encounter.reasonReference": "Where the encounter occurred"
+  },
+  "qicore-medicationadministration": {
+    "MedicationAdministration.status": "a status of medication adminsitration (e.g., in-progress, on-hold)",
+    "MedicationAdministration.medication": "a medication",
+    "MedicationAdministration.effective": "a time the medication was administered",
+    "MedicationAdministration.statusReason": "reason for the status",
+    "MedicationAdministration.subject": "a patient",
+    "MedicationAdministration.context": "an encounter",
+    "MedicationAdministration.reasonCode": "reason for medication"
+  },
+  "qicore-medicationadministrationnotdone": {
+    "MedicationAdministration.status": "a status of medication adminsitration",
+    "MedicationAdministration.medication": "a medication",
+    "MedicationAdministration.effective": "a time the medication was to have been administered",
+    "MedicationAdministration.statusReason": "why the administration was not performed",
+    "MedicationAdministration.extension:recorded": "When the MedicationAdministration was first captured in the subject's record",
+    "MedicationAdministration.subject": "a patient",
+    "MedicationAdministration.context": "an encounter"
+  },
+  "qicore-medicationdispense": {
+    "MedicationDispense.status": "a status (e.g., dispensed, not dispensed)",
+    "MedicationDispense.medication": "a medication",
+    "MedicationDispense.subject": "a patient",
+    "MedicationDispense.context": "the encounter associated with the dispense",
+    "MedicationDispense.performer": "who dispensed the medication",
+    "MedicationDispense.authorizingPrescription": "the authorizing prescription",
+    "MedicationDispense.type": "type of dispense (e.g., partially dispensed)",
+    "MedicationDispense.quantity": "the quantity dispensed",
+    "MedicationDispense.whenHandedOver": "a date for when dispensed to the patient",
+    "MedicationDispense.dosageInstruction": "free text dosage instructions (the SIG)",
+    "MedicationDispense.dosageInstruction.doseAndRate": "the dose and rate"
+  },
+  "qicore-medicationnotrequested": {
+    "MedicationRequest.dosageInstruction": "the dose and rate",
+    "MedicationRequest.category:us-core": "type of medication usage",
+    "MedicationRequest.doNotPerform": "If true, indicates that the provider is asking for the patient to either stop taking or to not start taking the specified medication."
+  },
+  "qicore-medicationrequest": {
+    "MedicationRequest.dosageInstruction": "the dose and rate",
+    "MedicationRequest.category:us-core": "type of medication usage",
+    "MedicationRequest.reasonReference": "US Core Condition or Observation that supports the prescription",
+    "MedicationRequest.doNotPerform": "If true, indicates that the provider is asking for the patient to either stop taking or to not start taking the specified medication."
+  },
+  "qicore-observationcancelled": {
+    "Observation.status": "a status",
+    "Observation.category": "a category code",
+    "Observation.code": "a code indicating the observation that was cancelled",
+    "Observation.subject": "a patient",
+    "Observation.effective": "a time or period covered by this decision",
+    "Observation.performer": "who answered the questions",
+    "Observation.value": "a value",
+    "Observation.issued": "when the decision to cancel the observation was made",
+    "Observation.extension:notDoneReason": "why the observation was cancelled",
+    "Observation.encounter": "the encounter relevant to the cancelled observation"
+  },
+  "qicore-patient": {
+    "Patient.extension:race": "a race",
+    "Patient.extension:ethnicity": "an ethnicity",
+    "Patient.telecom": "a contact detail for the individual",
+    "Patient.deceased": "indicates if the individual is deceased or not",
+    "Patient.extension:birthTime": "time of birth",
+    "Patient.identifier.system": "the namespace for the identifier value",
+    "Patient.identifier.value": "a unique identifier number within the system",
+    "Patient.name.family": "patient's family name",
+    "Patient.name.given": "patient's given name",
+    "Patient.telecom.system": "telecommunications form for contact point.",
+    "Patient.telecom.value": "the actual contact point details",
+    "Patient.telecom.use": "purpose of the contact point (e.g. home, work)",
+    "Patient.address.line": "Street name, number, direction & P.O. Box etc.",
+    "Patient.address.city": "Name of city, town etc.",
+    "Patient.address.state": "Sub-unit of country (abbreviations ok)",
+    "Patient.address.postalCode": "US Zip Code",
+    "Patient.address.period": "Time period address is in use",
+    "Patient.communication.language": "preferred communication language"
+  },
+  "qicore-procedure": {
+    "Procedure.bodySite": "Detailed and structured anatomical location information. Multiple locations are allowed - e.g. multiple punch biopsies of a lesion.",
+    "Procedure.reasonCode": "The coded reason why the procedure was performed. This may be a coded entity of some type, or may simply be present as text.",
+    "Procedure.extension:recorded": "the encounter associated with the procedure",
+    "Procedure.performer": "performer of the procedure. Limited to real people rather than equipment.",
+    "Procedure.report": "This could be a histology result, pathology report, surgical report, etc.",
+    "Procedure.usedReference": "Identifies medications, devices and any other substance used as part of the procedure.",
+    "Procedure.usedCode": "Identifies coded items that were used as part of the procedure.",
+    "Procedure.statusReason": "the reason for the current status of the procedure"
+  },
+  "qicore-procedurenotdone": {
+    "Procedure.reasonCode": "a reason the procedure was ordered",
+    "Procedure.extension:recorded": "the encounter associated with the procedure",
+    "Procedure.statusReason": "the reason for the current status of the procedure"
+  },
+  "qicore-servicenotrequested": {
+    "ServiceRequest.reasonCode": "Explanation/Justification for procedure or service",
+    "ServiceRequest.category:us-core": "Classification of service",
+    "ServiceRequest.doNotPerform": "True if service/procedure should not be performed",
+    "ServiceRequest.modifierExtension:isElective": "If true, this element marks the specified request as elective.",
+    "ServiceRequest.reasonReference": "Explanation/Justification for service or service",
+    "ServiceRequest.bodySite": "Anatomic location where the procedure should be performed. This is the target site.",
+    "ServiceRequest.extension:reasonRefused": "reason the service was not performed"
+  },
+  "qicore-servicerequest": {
+    "ServiceRequest.reasonCode": "Explanation/Justification for procedure or service",
+    "ServiceRequest.category:us-core": "Classification of service",
+    "ServiceRequest.doNotPerform": "True if service/procedure should not be performed",
+    "ServiceRequest.modifierExtension:isElective": "If true, this element marks the specified request as elective.",
+    "ServiceRequest.reasonReference": "Explanation/Justification for service or service",
+    "ServiceRequest.bodySite": "Anatomic location where the procedure should be performed. This is the target site.",
+    "ServiceRequest.extension:reasonRefused": "reason the service was not performed"
+  },
+  "qicore-simple-observation": {
+    "Observation.partOf": "an event during which the observation occurred"
+  },
+  "qicore-task": {
+    "Task.status": "status of the fulfillment of a referral or patient assigned to-do",
+    "Task.intent": "whether the task is a proposal, plan, or full order",
+    "Task.priority": "indicates how quickly the Task should be addressed with respect to other requests",
+    "Task.code": "a code indicating the type of task",
+    "Task.basedOn": "what triggered the task",
+    "Task.executionPeriod": "perfomance period for the task",
+    "Task.identifier": "business identifier of the task"
+  },
+  "resprate": {
+    "Observation.code": "a fixed code for respiratory rate",
+    "Observation.valueQuantity": "a result value",
+    "Observation.value": "a result value",
+    "Observation.status": "status of the result (e.g., preliminary, final)",
+    "Observation.category": "codes for high level observation categories - vital signs",
+    "Observation.category:VSCat": "codes for high level observation categories - vital signs",
+    "Observation.subject": "a patient",
+    "Observation.value[x]:valueQuantity": "vital sign component value",
+    "Observation.dataAbsentReason": "why the result is missing",
+    "Observation.component": "component observation"
+  },
+  "us-core-allergyintolerance": {
+    "AllergyIntolerance.clinicalStatus": "a clinical status of the allergy (e.g., active or resolved)",
+    "AllergyIntolerance.verificationStatus": "a verification status",
+    "AllergyIntolerance.code": "a code which tells you what the patient is allergic to",
+    "AllergyIntolerance.patient": "a patient",
+    "AllergyIntolerance.reaction.manifestation": "a reaction manifestation"
+  },
+  "us-core-average-blood-pressure": {
+    "Observation.subject": "a patient",
+    "Observation.code": "a fixed code for average systolic and average diastolic blood pressure panel",
+    "Observation.effective": "a clinically relevant time-period for the average of blood pressure (BP) readings",
+    "Observation.component:systolic.code": "a fixed *component* code for average systolic blood pressure",
+    "Observation.component:diastolic.code": "a fixed *component* code for average diastolic blood pressure",
+    "Observation.component:systolic.value": "a result value for average systolic blood pressure",
+    "Observation.component:diastolic.value": "a result value for average diastolic blood pressure"
+  },
+  "us-core-blood-pressure": {
+    "Observation.code": "a fixed code for systolic and diastolic blood pressure panel",
+    "Observation.component:systolic.code": "a fixed component code for systolic blood pressure",
+    "Observation.component:diastolic.code": "a fixed component code for diastolic blood pressure",
+    "Observation.component:systolic.value": "a result value for systolic blood pressure",
+    "Observation.component:diastolic.value": "a result value for diastolic blood pressure",
+    "Observation.status": "status of the blood pressure result (e.g., preliminary, final)"
+  },
+  "us-core-bmi": {
+    "Observation.subject": "a patient",
+    "Observation.code": "a fixed code for body mass index (BMI)",
+    "Observation.value": "a result value"
+  },
+  "us-core-body-height": {
+    "Observation.subject": "a patient",
+    "Observation.code": "a fixed code for body height",
+    "Observation.value": "a result value"
+  },
+  "us-core-body-temperature": {
+    "Observation.subject": "a patient",
+    "Observation.code": "a fixed code for body temperature",
+    "Observation.value": "a result value"
+  },
+  "us-core-body-weight": {
+    "Observation.subject": "a patient",
+    "Observation.code": "a fixed code for body weight",
+    "Observation.value": "a result value"
+  },
+  "us-core-care-experience-preference": {
+    "Observation.status": "a status",
+    "Observation.code": "a fixed code for care experience preference",
+    "Observation.subject": "a patient",
+    "Observation.category": "a category code of 'care-experience-preference'",
+    "Observation.effective": "a time indicating when the preference was made",
+    "Observation.value": "treatment intervention preference value"
+  },
+  "us-core-careplan": {
+    "CarePlan.status": "a status",
+    "CarePlan.intent": "an intent",
+    "CarePlan.category": "a category code of 'assess-plan",
+    "CarePlan.subject": "a patient",
+    "CarePlan.text": "a narrative summary of the patient assessment and plan of treatment"
+  },
+  "us-core-careteam": {
+    "CarePlan.subject": "a patient",
+    "CarePlan.participant": "a participant role for each careteam members",
+    "CarePlan.participant.member": "a reference to each careteam member which can be: * a practitioner or practitioner type (doctor, nurse, therapist) * a relative or friend or guardian ",
+    "CarePlan.status": "a status code"
+  },
+  "us-core-condition-encounter-diagnosis": {
+    "Condition.category": "a category code of 'encounter-diagnosis'",
+    "Condition.code": "a code that identifies the condition",
+    "Condition.subject": "a patient",
+    "Condition.clinicalStatus": "a clinical status of the condition (e.g., active or resolved)",
+    "Condition.verificationStatus": "a verification status",
+    "Condition.encounter": "an encounter",
+    "Condition.onset": "a date of diagnosis",
+    "Condition.abatement": "abatement date (in other words, date of resolution or remission)",
+    "Condition.recordedDate": "a date when recorded"
+  },
+  "us-core-condition-problems-health-concerns": {
+    "Condition.category:us-core": "a category code of 'problem-list-item' or 'health-concern",
+    "Condition.category:screening-assessment": "additional health status/assessment categories",
+    "Condition.code": "a code that identifies the condition",
+    "Condition.subject": "a patient",
+    "Condition.clinicalStatus": "a clinical status of the condition (e.g., active or resolved)",
+    "Condition.verificationStatus": "a verification status",
+    "Condition.onset": "a date of diagnosis",
+    "Condition.abatement": "abatement date (in other words, date of resolution or remission)",
+    "Condition.recordedDate": "a date when recorded"
+  },
+  "us-core-coverage": {
+    "Coverage.identifier": "health insurance member identifier or subscriber id",
+    "Coverage.status": "a status",
+    "Coverage.beneficiary": "the health insurance beneficiary (patient)",
+    "Coverage.relationship": "beneficiary's relationship to the subscriber",
+    "Coverage.subscriberId": "the health insurance issuer (payer)",
+    "Coverage.type": "health insurance coverage type (e.g., Medicare)",
+    "Coverage.period": "coverage start and/or end date",
+    "Coverage.class": "health insurance group and/or plan"
+  },
+  "us-core-diagnosticreport-lab": {
+    "DiagnosticReport.status": "a status",
+    "DiagnosticReport.category": "a category code of 'LAB",
+    "DiagnosticReport.code": "a code (preferably a LOINC code) which tells you what is being measured",
+    "DiagnosticReport.subject": "a patient",
+    "DiagnosticReport.effective": "the diagnostically relevant time (known as the 'effective time' and typically the time of specimen collection)",
+    "DiagnosticReport.issued": "when the report was released",
+    "DiagnosticReport.encounter": "encounter associated with the DiagnosticReport",
+    "DiagnosticReport.performer": "who issues the report",
+    "DiagnosticReport.result": "a result"
+  },
+  "us-core-diagnosticreport-note": {
+    "DiagnosticReport.status": "a status",
+    "DiagnosticReport.category": "a category",
+    "DiagnosticReport.code": "a code describing the type of report",
+    "DiagnosticReport.subject": "a patient",
+    "DiagnosticReport.effective": "the diagnostically relevant time (known as the 'effective time' and typically the time of the procedure)",
+    "DiagnosticReport.issued": "instant the report was released",
+    "DiagnosticReport.encounter": "the encounter the report occurred within",
+    "DiagnosticReport.performer": "an author (actor) producing the report",
+    "DiagnosticReport.result": "a reference to one or more test results",
+    "DiagnosticReport.media": "a reference to one or more images",
+    "DiagnosticReport.presentedForm": "a reference to the full report (presentedForm)"
+  },
+  "us-core-documentreference": {
+    "Immunization.status": "a status",
+    "Immunization.vaccineCode": "a vaccine code that identifies the kind of vaccine administered",
+    "Immunization.patient": "a patient",
+    "Immunization.encounter": "the encounter the immunization was part of",
+    "Immunization.occurrence": "a date the vaccine was administered",
+    "Immunization.location": "where immunization occured",
+    "Immunization.statusReason": "a statusReason if the vaccine wasn't given",
+    "Immunization.primarySource": "a flag to indicate whether the vaccine was reported by someone other than the person who administered the vaccine"
+  },
+  "us-core-encounter": {
+    "Encounter.status": "A status",
+    "Encounter.class": "A classification such as inpatient, outpatient or emergency",
+    "Encounter.type": "An encounter type",
+    "Encounter.subject": "A patient",
+    "Encounter.identifier": "An encounter identifier",
+    "Encounter.participant": "Providers involved in the encounter",
+    "Encounter.period": "When the encounter occurred",
+    "Encounter.reasonCode": "Reason for the visit",
+    "Encounter.hospitalization.dischargeDisposition": "The discharge disposition",
+    "Encounter.location": "Reason the encounter takes place"
+  },
+  "us-core-goal": {
+    "Goal.lifecycleStatus": "a status",
+    "Goal.description": "text description of the goal",
+    "Goal.subject": "a patient",
+    "Goal.start": "when goal pursuit began",
+    "Goal.target": "target date(s)"
+  },
+  "us-core-head-circumference": {
+    "Observation.subject": "a patient",
+    "Observation.code": "a fixed code for head circumference",
+    "Observation.valueQuantity": "a result value"
+  },
+  "us-core-heart-rate": {
+    "Observation.subject": "a patient",
+    "Observation.code": "a fixed code for heart rate",
+    "Observation.valueQuantity": "a result value"
+  },
+  "us-core-immunization": {
+    "Immunization.status": "a status",
+    "Immunization.vaccineCode": "a vaccine code that identifies the kind of vaccine administered",
+    "Immunization.patient": "a patient",
+    "Immunization.encounter": "the encounter the immunization was part of",
+    "Immunization.occurrence": "a date the vaccine was administered",
+    "Immunization.location": "where immunization occured",
+    "Immunization.statusReason": "a statusReason if the vaccine wasn't given",
+    "Immunization.primarySource": "a flag to indicate whether the vaccine was reported by someone other than the person who administered the vaccine"
+  },
+  "us-core-implantable-device": {
+    "Device.type": "a code identifying the type of device",
+    "Device.patient": "a patient",
+    "Device.udiCarrier.carrierHRF": "A Unique Device Identifier (UDI) numeric or alphanumeric code as the Human Readable Form (HRF) string representation of the barcode",
+    "Device.udiCarrier.deviceIdentifier": "The Device Identifier (UDI-DI)",
+    "Device.manufactureDate": "the manufacture date",
+    "Device.expirationDate": "the expiration date",
+    "Device.lotNumber": "the lot number",
+    "Device.serialNumber": "the serial number",
+    "Device.distinctIdentifier": "the distinct identifier (i.e., the distinct identification code)"
+  },
+  "us-core-location": {
+    "Location.name": "A name",
+    "Location.identifier": "Location or facility identifier",
+    "Location.status": "A status (whether in use)",
+    "Location.type": "The type of location or facility",
+    "Location.telecom": "Contact details of the location",
+    "Location.address": "A Location address",
+    "Location.managingOrganization": "The managing organization"
+  },
+  "us-core-medication": {
+    "Medication.code": "A medication code"
+  },
+  "us-core-medicationrequest": {
+    "MedicationRequest.status": "a status",
+    "MedicationRequest.intent": "an intent code",
+    "MedicationRequest.medication": "a medication to be taken",
+    "MedicationRequest.subject": "a patient",
+    "MedicationRequest.category": "the category (e.g., Discharge Medication)",
+    "MedicationRequest.reported": "the `reported` flag or reference signaling that information is from a secondary source such as a patient",
+    "MedicationRequest.encounter": "the encounters",
+    "MedicationRequest.requester": "a prescriber",
+    "MedicationRequest.authoredOn": "a date for when written",
+    "MedicationRequest.reasonCode": "the prescription Sig",
+    "MedicationRequest.dispenseRequest": "the amount dispensed and number of refills",
+    "MedicationRequest.dosageInstruction.doseAndRate": "the dose and rate"
+  },
+  "us-core-observation-clinical-result": {
+    "Observation.status": "a status",
+    "Observation.category": "a category code",
+    "Observation.code": "a LOINC code, if available, which tells you what is being measured",
+    "Observation.subject": "a patient",
+    "Observation.encounter": "encounter associated with Observation",
+    "Observation.effective": "a time indicating when the measurement was taken",
+    "Observation.value": "a result value * if the result value is a numeric quantity, a standard UCUM unit",
+    "Observation.dataAbsentReason": "a reason why the data is absent"
+  },
+  "us-core-observation-lab": {
+    "Observation.category": "a category code of 'laboratory",
+    "Observation.code": "a laboratory LOINC code, if available, which tells you what is being measured",
+    "Observation.value": "a result value * if the result value is a numeric quantity, a standard UCUM unity * if the result value is a coded quantity, a standard SNOMED CT",
+    "Observation.interpretation": "result interpretation",
+    "Observation.referenceRange": "result reference range",
+    "Observation.specimen": "a specimen type (e.g., blood, serum, urine)"
+  },
+  "us-core-observation-occupation": {
+    "Observation.status": "a status",
+    "Observation.code": "a code for job history",
+    "Observation.subject": "a patient",
+    "Observation.valueCodeableConcept": "the job code or text",
+    "Observation.category": "a category code of 'social-history",
+    "Observation.effectivePeriod": "when the job occurred",
+    "Observation.component.code": "a code for the job history industry",
+    "Observation.component.valueCodeableConcept": "the industry code or text"
+  },
+  "us-core-observation-pregnancyintent": {
+    "Observation.status": "a status",
+    "Observation.code": "a code for pregnancy intention observation",
+    "Observation.subject": "a patient",
+    "Observation.effectiveDateTime": "when the observation occurred",
+    "Observation.valueCodeableConcept": "the pregnancy intention",
+    "Observation.category": "a category code of 'social-history'"
+  },
+  "us-core-observation-pregnancystatus": {
+    "Observation.status": "a status",
+    "Observation.code": "a code for pregnancy status observation",
+    "Observation.subject": "a patient",
+    "Observation.effectiveDateTime": "when the observation occurred",
+    "Observation.valueCodeableConcept": "the pregnancy status",
+    "Observation.category": "a category code of 'social-history'"
+  },
+  "us-core-observation-screening-assessment": {
+    "Observation.status": "a status",
+    "Observation.category": [
+      "a category code of 'survey'",
+      "additional categories that further specify the assessment or screening"
+    ],
+    "Observation.code": "a LOINC code, if available, which tells you the survey question",
+    "Observation.subject": "a patient",
+    "Observation.effective": "a time indicating when the survey was taken",
+    "Observation.dataAbsentReason": "the answer or a reason why the data is absent * if the result value is a numeric quantity and coded quantity units are used, UCUM is required.",
+    "Observation.performer": "who answered the questions",
+    "Observation.derivedFrom": "related questionnaire responses or observations that this observation is made from",
+    "Observation.value": "reference to observations that make up this observation"
+  },
+  "us-core-observation-sexual-orientation": {
+    "Observation.status": "a status",
+    "Observation.code": "a fixed code for sexual orientation",
+    "Observation.subject": "a patient",
+    "Observation.effective": "a time indicating when the observation was made",
+    "Observation.valueCodeableConcept": "a sexual orientation value"
+  },
+  "us-core-organization": {
+    "Organization.active": "A status of the organization (i.e., whether is still active",
+    "Organization.name": "A name",
+    "Organization.identifier": "An identifier",
+    "Organization.telecom": "A list of contact information",
+    "Organization.address": "An address"
+  },
+  "us-core-patient": {
+    "Patient.identifier": "a patient identifier (e.g. MRN)",
+    "Patient.name": "a patient name",
+    "Patient.gender": "a gender",
+    "Patient.birthDate": "a birth date",
+    "Patient.address": "an address"
+  },
+  "us-core-practitioner": {
+    "Practitioner.identifier": "An identifier which Must Support an NPI if available",
+    "Practitioner.name": "A name",
+    "Practitioner.telecom": "Contact information",
+    "Practitioner.address": "An address"
+  },
+  "us-core-practitionerrole": {
+    "PractitionerRole.organization": "An associated organization",
+    "PractitionerRole.practitioner": "An associated practitioner",
+    "PractitionerRole.code": "A role",
+    "PractitionerRole.specialty": "A specialty",
+    "PractitionerRole.location": "An associated location",
+    "PractitionerRole.telecom": "Contact information",
+    "PractitionerRole.endpoint": "A communication endpoint"
+  },
+  "us-core-procedure": {
+    "Procedure.status": "a status",
+    "Procedure.code": "a code that identifies the type of procedure performed on the patient",
+    "Procedure.subject": "a patient",
+    "Procedure.performed": "when the procedure was performed",
+    "Procedure.encounter": "the encounter associated with the procedure"
+  },
+  "us-core-provenance": {
+    "Provenance.target": "a reference to the resource(s) the Provenance record is supporting (target)",
+    "Provenance.recorded": "a date and time for the activity",
+    "Provenance.agent:ProvenanceAuthor": "the author organization responsible for the information",
+    "Provenance.agent:ProvenanceTransmitter": "the transmitter that provided the information",
+    "Provenance.agent:ProvenanceTransmitter.who": "the transmitter organization responsible for the transmission (if the transmitter is a device the transmitter organization must also be valued)."
+  },
+  "us-core-pulse-oximetry": {
+    "Observation.code": "a fixed code for oxygen saturation in arterial blood as defined in the FHIR oxygen saturation profile",
+    "Observation.code.coding": "an additional coding for oxygen saturation in arterial blood by pulse oximetry",
+    "Observation.valueQuantity": "a value for oxygen saturation",
+    "Observation.component.code": "a code for inspired oxygen concentration",
+    "Observation.component.valueQuantity": "a value for inspired oxygen concentration"
+  },
+  "us-core-questionnaireresponse": {
+    "QuestionnaireResponse.": "a reference back to the assessment upon which it is based",
+    "QuestionnaireResponse.status": "a status",
+    "QuestionnaireResponse.subject": "a patient",
+    "QuestionnaireResponse.authored": "the date the answers were gathered",
+    "QuestionnaireResponse.author": "a practitioner who recorded the answers",
+    "QuestionnaireResponse.item": "the questions and decimal, string, and coded type answers * each question must have an identifier pointing to the question"
+  },
+  "us-core-relatedperson": {
+    "RelatedPerson.active": "a status",
+    "RelatedPerson.patient": "a patient",
+    "RelatedPerson.relationship": "the relationship to the patient",
+    "RelatedPerson.name": "the name of the related person",
+    "RelatedPerson.telecom": "the telecom of the related person",
+    "RelatedPerson.address": "the address of the related person"
+  },
+  "us-core-respiratory-rate": {
+    "Observation.subject": "a patient",
+    "Observation.code": "a fixed code for respiratory rate",
+    "Observation.valueQuantity": "a result value"
+  },
+  "us-core-servicerequest": {
+    "ServiceRequest.status": "a status",
+    "ServiceRequest.intent": "an intent code indicating whether the request is a proposal, plan, or order.",
+    "ServiceRequest.code": "a code defining what is being requested",
+    "ServiceRequest.subject": "a patient",
+    "ServiceRequest.category": "the category",
+    "ServiceRequest.encounter": "the encounter in which the request was created",
+    "ServiceRequest.occurrence": "when requested service SHOULD happen",
+    "ServiceRequest.authoredOn": "when the request was made",
+    "ServiceRequest.requester": "the requester"
+  },
+  "us-core-sexual-orientation": {
+    "Observation.status": "a status",
+    "Observation.code": "a fixed code for sexual orientation",
+    "Observation.subject": "a patient",
+    "Observation.effective": "a time indicating when the observation was made",
+    "Observation.valueCodeableConcept": "a sexual orientation value"
+  },
+  "us-core-simple-observation": {
+    "Observation.status": "a status",
+    "Observation.category": "a category code",
+    "Observation.code": "a code",
+    "Observation.subject": "a patient",
+    "Observation.effective": "a time indicating when the observation was made",
+    "Observation.performer": "who answered the questions",
+    "Observation.value": "a value",
+    "Observation.category:us-core": "a classification of the type of observation",
+    "Observation.value[x]:valueCodeableConcept": "a code representing the observed value"
+  },
+  "us-core-smokingstatus": {
+    "Observation.status": "a status",
+    "Observation.category": "a category code of 'social-history'",
+    "Observation.code": "a code for smoking observation",
+    "Observation.subject": "a patient",
+    "Observation.effectiveDateTime": "when the observation occurred",
+    "Observation.value": "a result value"
+  },
+  "us-core-specimen": {
+    "Specimen.type": "a specimen code",
+    "Specimen.identifier": "business identifier(s)",
+    "Specimen.subject": "a patient"
+  },
+  "us-core-treatment-intervention-preference": {
+    "Observation.status": "a status",
+    "Observation.code": "a fixed code for treatment intervention preference",
+    "Observation.subject": "a patient",
+    "Observation.category": "a category code of 'intervention-preference'",
+    "Observation.effective": "a time indicating when the preference was made",
+    "Observation.value": "treatment intervention preference value"
+  },
+  "us-core-vital-signs": {
+    "Observation.status": "a status",
+    "Observation.category": "a category code of 'vital-signs'",
+    "Observation.code": "a LOINC code, if available, which tells you what is being measured",
+    "Observation.subject": "a patient",
+    "Observation.effective": "a clinically relevant time",
+    "Observation.value": "a result value *if the result value is a numeric quantity, a standard UCUM unit",
+    "Observation.dataAbsentReason": "a reason if the value is absent",
+    "Observation.component": "component results"
+  }
+}
