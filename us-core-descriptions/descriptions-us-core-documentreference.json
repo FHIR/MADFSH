@@ -1,0 +1,10 @@
+{
+    "Immunization.status": "a status",
+    "Immunization.vaccineCode": "a vaccine code that identifies the kind of vaccine administered",
+    "Immunization.patient": "a patient",
+    "Immunization.encounter": "the encounter the immunization was part of",
+    "Immunization.occurrence": "a date the vaccine was administered",
+    "Immunization.location": "where immunization occured",
+    "Immunization.statusReason": "a statusReason if the vaccine wasn't given",
+    "Immunization.primarySource": "a flag to indicate whether the vaccine was reported by someone other than the person who administered the vaccine"
+}

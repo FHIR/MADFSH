@@ -1,0 +1,17 @@
+{
+    "Observation.code": "a fixed code for systolic and diastolic blood pressure panel",
+    "Observation.component:systolic.code": "a fixed component code for systolic blood pressure",
+    "Observation.component:diastolic.code": "a fixed component code for diastolic blood pressure",
+    "Observation.component:SystolicBP": "a fixed component code for systolic blood pressure", 
+    "Observation.component:DiastolicBP": "a result value for diastolic blood pressure", 
+    "Observation.status": "status of the blood pressure result (e.g., preliminary, final)",
+    "Observation.dataAbsentReason": "why the result is missing", 
+    "Observation.effective": "date and time of bp observation", 
+    "Observation.component": "component observation", 
+    "Observation.encounter": "the healthcare event during which the observation is made", 
+    "Observation.category": "codes for high level observation categories - vital signs", 
+    "Observation.category:VSCat": "codes for high level observation categories - vital signs", 
+    "Observation.subject": "a patient",  
+    "Observation.value": "a result value", 
+    "Observation.value[x]:valueQuantity": "vital sign component value"
+}

@@ -1,0 +1,5 @@
+{
+    "Procedure.reasonCode": "a reason the procedure was ordered",
+    "Procedure.extension:recorded": "the encounter associated with the procedure",
+    "Procedure.statusReason": "the reason for the current status of the procedure"
+}

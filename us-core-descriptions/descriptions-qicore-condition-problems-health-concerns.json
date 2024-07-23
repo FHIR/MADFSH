@@ -1,0 +1,9 @@
+{
+    "Condition.category": "a category code of 'problem-list-item' or 'health-concern",
+    "Condition.extension:extension:assertedDate": "date the condition was first asserted",
+    "Condition.severity": "Subjective severity of condition",
+    "Condition.extension:assertedDate": "date the condition was first asserted",
+    "Condition.category:sdoh": "sdoh category of the condition",
+    "Condition.bodySite": "Anatomical location, if relevant",
+    "Condition.stage": "stage of the condition"
+}

@@ -1,0 +1,14 @@
+{
+    "DeviceRequest.status": "a status of a patient requesting a medical device (e.g., active, on-hold)",
+    "DeviceRequest.intent": "code indicating the degree of authority/intentionality associated with the request",
+    "DeviceRequest.code": "Code for what medical device is being requested/ordered",  
+    "DeviceRequest.authoredOn": "when the request transitioned to being actionable", 
+    "DeviceRequest.modifierExtension:doNotPerform": "true if request is do not perform",
+    "DeviceRequest.identifier": "business identifier", 
+    "DeviceRequest.subject": "a patient", 
+    "DeviceRequest.encounter": "relevant encounter to the request", 
+    "DeviceRequest.occurrence": "time or schedule of request", 
+    "DeviceRequest.requester": "who/what is requesting the device", 
+    "DeviceRequest.performer": "who/what is performing the request", 
+    "DeviceRequest.reasonReference": "reason for request" 
+}

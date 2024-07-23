@@ -1,0 +1,7 @@
+{
+    "Provenance.target": "a reference to the resource(s) the Provenance record is supporting (target)",
+    "Provenance.recorded": "a date and time for the activity",
+    "Provenance.agent:ProvenanceAuthor": "the author organization responsible for the information",
+    "Provenance.agent:ProvenanceTransmitter": "the transmitter that provided the information",
+    "Provenance.agent:ProvenanceTransmitter.who": "the transmitter organization responsible for the transmission (if the transmitter is a device the transmitter organization must also be valued)."
+}

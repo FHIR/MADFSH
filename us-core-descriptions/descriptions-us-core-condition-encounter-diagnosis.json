@@ -1,0 +1,11 @@
+{
+    "Condition.category": "a category code of 'encounter-diagnosis'",
+    "Condition.code": "a code that identifies the condition",
+    "Condition.subject": "a patient",
+    "Condition.clinicalStatus": "a clinical status of the condition (e.g., active or resolved)",
+    "Condition.verificationStatus": "a verification status",
+    "Condition.encounter": "an encounter",
+    "Condition.onset": "a date of diagnosis",
+    "Condition.abatement": "abatement date (in other words, date of resolution or remission)",
+    "Condition.recordedDate": "a date when recorded"
+}

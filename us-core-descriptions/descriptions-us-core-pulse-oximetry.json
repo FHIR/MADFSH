@@ -1,0 +1,7 @@
+{
+    "Observation.code": "a fixed code for oxygen saturation in arterial blood as defined in the FHIR oxygen saturation profile",
+    "Observation.code.coding": "an additional coding for oxygen saturation in arterial blood by pulse oximetry",
+    "Observation.valueQuantity": "a value for oxygen saturation",
+    "Observation.component.code": "a code for inspired oxygen concentration",
+    "Observation.component.valueQuantity": "a value for inspired oxygen concentration"
+}

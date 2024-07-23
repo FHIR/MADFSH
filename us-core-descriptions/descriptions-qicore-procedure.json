@@ -1,0 +1,10 @@
+{
+    "Procedure.bodySite": "Detailed and structured anatomical location information. Multiple locations are allowed - e.g. multiple punch biopsies of a lesion.",
+    "Procedure.reasonCode": "The coded reason why the procedure was performed. This may be a coded entity of some type, or may simply be present as text.",
+    "Procedure.extension:recorded": "the encounter associated with the procedure",
+    "Procedure.performer": "performer of the procedure. Limited to real people rather than equipment.",
+    "Procedure.report": "This could be a histology result, pathology report, surgical report, etc.",
+    "Procedure.usedReference": "Identifies medications, devices and any other substance used as part of the procedure.",
+    "Procedure.usedCode": "Identifies coded items that were used as part of the procedure.",
+    "Procedure.statusReason": "the reason for the current status of the procedure"
+}

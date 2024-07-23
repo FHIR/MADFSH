@@ -1,0 +1,8 @@
+{
+    "Encounter.serviceProvider": "The organization (facility) responsible for this encounter",
+    "Encounter.diagnosis": "The list of diagnosis relevant to this encounter",
+    "Encounter.priority": "Indicates the urgency of the encounter",
+    "Encounter.length": "Actual quantity of time the encounter lasted (less time absent)",
+    "Encounter.hospitalization": "Details about the admission to a healthcare service",
+    "Encounter.reasonReference": "Where the encounter occurred"
+}

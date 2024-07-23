@@ -1,0 +1,7 @@
+{
+    "AllergyIntolerance.clinicalStatus": "a clinical status of the allergy (e.g., active or resolved)",
+    "AllergyIntolerance.verificationStatus": "a verification status",
+    "AllergyIntolerance.code": "a code which tells you what the patient is allergic to",
+    "AllergyIntolerance.patient": "a patient",
+    "AllergyIntolerance.reaction.manifestation": "a reaction manifestation"
+}

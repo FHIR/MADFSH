@@ -1,0 +1,11 @@
+{
+    "Device.type": "a code identifying the type of device",
+    "Device.patient": "a patient",
+    "Device.udiCarrier.carrierHRF": "A Unique Device Identifier (UDI) numeric or alphanumeric code as the Human Readable Form (HRF) string representation of the barcode",
+    "Device.udiCarrier.deviceIdentifier": "The Device Identifier (UDI-DI)",
+    "Device.manufactureDate": "the manufacture date",
+    "Device.expirationDate": "the expiration date",
+    "Device.lotNumber": "the lot number",
+    "Device.serialNumber": "the serial number",
+    "Device.distinctIdentifier": "the distinct identifier (i.e., the distinct identification code)"
+}

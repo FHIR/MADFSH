@@ -1,0 +1,11 @@
+{
+    "Condition.category:us-core": "a category code of 'problem-list-item' or 'health-concern",
+    "Condition.category:screening-assessment": "additional health status/assessment categories",
+    "Condition.code": "a code that identifies the condition",
+    "Condition.subject": "a patient",
+    "Condition.clinicalStatus": "a clinical status of the condition (e.g., active or resolved)",
+    "Condition.verificationStatus": "a verification status",
+    "Condition.onset": "a date of diagnosis",
+    "Condition.abatement": "abatement date (in other words, date of resolution or remission)",
+    "Condition.recordedDate": "a date when recorded"
+}

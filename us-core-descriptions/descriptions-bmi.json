@@ -1,0 +1,13 @@
+{
+    "Observation.code": "a fixed code for body mass index (BMI)",
+    "Observation.valueQuantity": "a result value",
+    "Observation.subject": "a patient",
+    "Observation.value": "a result value",
+    "Observation.status": "status of the result (e.g., preliminary, final)",
+    "Observation.effective": "date and time of bmi observation",
+    "Observation.category": "codes for high level observation categories - vital signs",
+    "Observation.category:VSCat": "codes for high level observation categories - vital signs",
+    "Observation.value[x]:valueQuantity": "vital sign component value",
+    "Observation.dataAbsentReason": "why the result is missing",
+    "Observation.component": "component observation"
+}

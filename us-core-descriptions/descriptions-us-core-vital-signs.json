@@ -1,0 +1,10 @@
+{
+    "Observation.status": "a status",
+    "Observation.category": "a category code of 'vital-signs'",
+    "Observation.code": "a LOINC code, if available, which tells you what is being measured",
+    "Observation.subject": "a patient",
+    "Observation.effective": "a clinically relevant time",
+    "Observation.value": "a result value *if the result value is a numeric quantity, a standard UCUM unit",
+    "Observation.dataAbsentReason": "a reason if the value is absent",
+    "Observation.component": "component results"
+}

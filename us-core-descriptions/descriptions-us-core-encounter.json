@@ -1,0 +1,12 @@
+{
+    "Encounter.status": "A status",
+    "Encounter.class": "A classification such as inpatient, outpatient or emergency",
+    "Encounter.type": "An encounter type",
+    "Encounter.subject": "A patient",
+    "Encounter.identifier": "An encounter identifier",
+    "Encounter.participant": "Providers involved in the encounter",
+    "Encounter.period": "When the encounter occurred",
+    "Encounter.reasonCode": "Reason for the visit",
+    "Encounter.hospitalization.dischargeDisposition": "The discharge disposition",
+    "Encounter.location": "Reason the encounter takes place"
+}

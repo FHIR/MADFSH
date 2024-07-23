@@ -1,0 +1,9 @@
+{
+    "AdverseEvent.actuality": "Overall nature of the adverse event, e.g. real or potential",
+    "AdverseEvent.category": "Overall categorization of the event, e.g. product-related or situational.",
+    "AdverseEvent.recordedDate": "When the event was recorded",
+    "AdverseEvent.event": "a code representing the type of event", 
+    "AdverseEvent.subject": "a patient",
+    "AdverseEvent.encounter": "relevant encounter",
+    "AdverseEvent.resultingCondition": "Effect on the subject due to this event"
+}

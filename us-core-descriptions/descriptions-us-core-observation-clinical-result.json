@@ -1,0 +1,10 @@
+{
+    "Observation.status": "a status",
+    "Observation.category": "a category code",
+    "Observation.code": "a LOINC code, if available, which tells you what is being measured",
+    "Observation.subject": "a patient",
+    "Observation.encounter": "encounter associated with Observation",
+    "Observation.effective": "a time indicating when the measurement was taken",
+    "Observation.value": "a result value * if the result value is a numeric quantity, a standard UCUM unit",
+    "Observation.dataAbsentReason": "a reason why the data is absent"
+}

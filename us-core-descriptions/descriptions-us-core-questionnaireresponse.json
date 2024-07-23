@@ -1,0 +1,8 @@
+{
+    "QuestionnaireResponse.": "a reference back to the assessment upon which it is based",
+    "QuestionnaireResponse.status": "a status",
+    "QuestionnaireResponse.subject": "a patient",
+    "QuestionnaireResponse.authored": "the date the answers were gathered",
+    "QuestionnaireResponse.author": "a practitioner who recorded the answers",
+    "QuestionnaireResponse.item": "the questions and decimal, string, and coded type answers * each question must have an identifier pointing to the question"
+}

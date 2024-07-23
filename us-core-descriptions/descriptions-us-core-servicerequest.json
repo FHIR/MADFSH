@@ -1,0 +1,11 @@
+{
+    "ServiceRequest.status": "a status",
+    "ServiceRequest.intent": "an intent code indicating whether the request is a proposal, plan, or order.",
+    "ServiceRequest.code": "a code defining what is being requested",
+    "ServiceRequest.subject": "a patient",
+    "ServiceRequest.category": "the category",
+    "ServiceRequest.encounter": "the encounter in which the request was created",
+    "ServiceRequest.occurrence": "when requested service SHOULD happen",
+    "ServiceRequest.authoredOn": "when the request was made",
+    "ServiceRequest.requester": "the requester"
+}

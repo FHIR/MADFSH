@@ -1,0 +1,428 @@
+[
+  {
+    "name": "Severe Obstetric Complications",
+    "identifier": "CMS 1028", 
+    "keyURL": "https://madie.cms.gov/Measure/SevereObstetricComplicationsFHIR",
+    "definitionURL": "https://ecqi.healthit.gov/ecqm/eh/2024/cms1028v2"
+  },
+  {
+    "name": "Excessive Radiation Dose or Inadequate Image Quality for Diagnostic Computed Tomography (CT) in Adults",
+    "identifier": "CMS 1074", 
+    "keyURL": "https://madie.cms.gov/Measure/AlaraCTIQRFHIR",
+    "definitionURL": "https://ecqi.healthit.gov/ecqm/eh/2025/cms1074v2?qt-tabs_measure=measure-information"
+  },
+  {
+    "name": "Hospital Harm - Pressure Injury",
+    "identifier": "CMS 826", 
+    "keyURL": "https://madie.cms.gov/Measure/HospitalHarmPressureInjuryFHIR",
+    "definitionURL": "https://ecqi.healthit.gov/ecqm/eh/2025/cms0826v2?qt-tabs_measure=measure-information"
+  },
+  {
+    "name": "Hospital Harm - Acute Kidney Injury",
+    "identifier": "CMS 832", 
+    "keyURL": "https://madie.cms.gov/Measure/HospitalHarmAcuteKidneyInjuryFHIR",
+    "definitionURL": "https://ecqi.healthit.gov/ecqm/eh/2025/cms0832v2?qt-tabs_measure=measure-information"
+  },
+  {
+    "name": "Discharged on Antithrombotic Therapy",
+    "identifier": "CMS 104", 
+    "keyURL": "https://madie.cms.gov/Measure/DischargedonAntithromboticTherapyFHIR",
+    "definitionURL": "https://ecqi.healthit.gov/ecqm/eh/2024/cms0104v12"
+  },
+  {
+    "name": "Excessive Radiation Dose or Inadequate Image Quality for Diagnostic Computed Tomography (CT) in Adults (Clinician Level)",
+    "identifier": "CMS 1056", 
+    "keyURL": "https://madie.cms.gov/Measure/AlaraCTClinicalFHIR",
+    "definitionURL": "https://ecqi.healthit.gov/ecqm/ec/2025/cms1056v2?qt-tabs_measure=measure-information"
+  },
+  {
+    "name": "Venous Thromboembolism Prophylaxis",
+    "identifier": "CMS 108", 
+    "keyURL": "https://madie.cms.gov/Measure/VenousThromboembolismProphylaxisFHIR",
+    "definitionURL": "https://ecqi.healthit.gov/ecqm/eh/2024/cms0108v12"
+  },
+  {
+    "name": "Childhood Immunization Status",
+    "identifier": "CMS 117", 
+    "keyURL": "http://ecqi.healthit.gov/ecqms/Measure/ChildhoodImmunizationStatusFHIR",
+    "definitionURL": "https://ecqi.healthit.gov/ecqm/ec/2024/cms0117v12"
+  },
+  {
+    "name": "Childhood Immunization Status",
+    "identifier": "CMS 117", 
+    "keyURL": "https://madie.cms.gov/Measure/ChildhoodImmunizationStatusFHIR",
+    "definitionURL": "https://ecqi.healthit.gov/ecqm/ec/2024/cms0117v12"
+  },
+  {
+    "name": "Sexually Transmitted Infection (STI) Testing for People with HIV",
+    "identifier": "CMS 1188", 
+    "keyURL": "https://madie.cms.gov/Measure/HIVSTITestingFHIR",
+    "definitionURL": "https://ecqi.healthit.gov/ecqm/ec/2024/cms1188v1"
+  },
+  {
+    "name": "Diabetes: Hemoglobin A1c (HbA1c) Poor Control (> 9%)",
+    "identifier": "CMS 122", 
+    "keyURL": "https://madie.cms.gov/Measure/DiabetesHemoglobinA1cHbA1cPoorControl9FHIR",
+    "definitionURL": "https://ecqi.healthit.gov/ecqm/ec/2024/cms0122v12"
+  },
+  {
+    "name": "Diabetes: Hemoglobin A1c (HbA1c) Poor Control (> 9%)",
+    "identifier": "CMS 122", 
+    "keyURL": "https://madie.cms.gov/Measure/DiabetesGlycemicStatusAssessmentGreaterThan9PercentFHIR",
+    "definitionURL": "https://ecqi.healthit.gov/ecqm/ec/2024/cms0122v12"
+  },
+  {
+    "name": "Prostate Cancer: Avoidance of Overuse of Bone Scan for Staging Low Risk Prostate Cancer Patients",
+    "identifier": "CMS 129", 
+    "keyURL": "https://madie.cms.gov/Measure/ProstateCaAvoidanceBoneScanOveruseFHIR",
+    "definitionURL": "https://ecqi.healthit.gov/ecqm/ec/2024/cms0129v13"
+  },
+  {
+    "name": "Colorectal Cancer Screening",
+    "identifier": "CMS 130", 
+    "keyURL": "https://madie.cms.gov/Measure/ColonCancerScreeningFHIR",
+    "definitionURL": "https://ecqi.healthit.gov/ecqm/ec/2024/cms0130v12"
+  },
+  {
+    "name": "Cataracts: 20/40 or Better Visual Acuity within 90 Days Following Cataract Surgery",
+    "identifier": "CMS 133", 
+    "keyURL": "https://madie.cms.gov/Measure/Cataracts2040BCVAwithin90DaysFHIR",
+    "definitionURL": "https://ecqi.healthit.gov/ecqm/ec/2024/cms0133v12"
+  },
+  {
+    "name": "Follow-Up Care for Children Prescribed ADHD Medication (ADD)",
+    "identifier": "CMS 136", 
+    "keyURL": "https://madie.cms.gov/Measure/FollowUpCareforChildrenPrescribedADHDMedicationADDFHIR",
+    "definitionURL": "https://ecqi.healthit.gov/sites/default/files/ecqm/measures/CMS136v11.html"
+  },
+  {
+    "name": "Falls: Screening for Future Fall Risk",
+    "identifier": "CMS 139", 
+    "keyURL": "http://ecqi.healthit.gov/ecqms/Measure/FallsScreeningForFutureFallRiskFHIR",
+    "definitionURL": "https://ecqi.healthit.gov/ecqm/ec/2024/cms0139v12"
+  },
+  {
+    "name": "Falls: Screening for Future Fall Risk",
+    "identifier": "CMS 139", 
+    "keyURL": "https://madie.cms.gov/Measure/FallsScreeningForFutureFallRiskFHIR",
+    "definitionURL": "https://ecqi.healthit.gov/ecqm/ec/2024/cms0139v12"
+  },
+  {
+    "name": "Diabetic Retinopathy: Communication with the Physician Managing Ongoing Diabetes Care",
+    "identifier": "CMS 142", 
+    "keyURL": "https://madie.cms.gov/Measure/DRCommunicationWithPhysicianManagingDiabetesFHIR",
+    "definitionURL": "https://ecqi.healthit.gov/ecqm/ec/2024/cms0142v12"
+  },
+  {
+    "name": "Primary Open-Angle Glaucoma (POAG): Optic Nerve Evaluation",
+    "identifier": "CMS 143", 
+    "keyURL": "https://madie.cms.gov/Measure/POAGOpticNerveEvaluationFHIR",
+    "definitionURL": "https://ecqi.healthit.gov/ecqm/ec/2024/cms0143v12"
+  },
+  {
+    "name": "Heart Failure (HF): Beta-Blocker Therapy for Left Ventricular Systolic Dysfunction (LVSD)",
+    "identifier": "CMS 144", 
+    "keyURL": "https://madie.cms.gov/Measure/HFBetaBlockerTherapyforLVSDFHIR",
+    "definitionURL": "https://ecqi.healthit.gov/ecqm/ec/2024/cms0144v12"
+  },
+  {
+    "name": "Coronary Artery Disease (CAD): Beta-Blocker Therapy-Prior Myocardial Infarction (MI) or Left Ventricular Systolic Dysfunction (LVEF) less than or equal to 40%",
+    "identifier": "CMS 145", 
+    "keyURL": "https://madie.cms.gov/Measure/CADBetaBlockerTherapyPriorMIorLVSDFHIR",
+    "definitionURL": "https://ecqi.healthit.gov/ecqm/ec/2024/cms0145v12"
+  },
+  {
+    "name": "Dementia: Cognitive Assessment",
+    "identifier": "CMS 149", 
+    "keyURL": "https://madie.cms.gov/Measure/DementiaCognitiveAssessmentFHIR",
+    "definitionURL": "https://ecqi.healthit.gov/ecqm/ec/2024/cms0149v12"
+  },
+  {
+    "name": "Chlamydia Screening in Women",
+    "identifier": "CMS 153", 
+    "keyURL": "https://madie.cms.gov/Measure/ChlamydiaScreeninginWomenFHIR",
+    "definitionURL": "https://ecqi.healthit.gov/ecqm/ec/2024/cms0153v12"
+  },
+  {
+    "name": "Appropriate Treatment for Upper Respiratory Infection (URI)",
+    "identifier": "CMS 154", 
+    "keyURL": "https://madie.cms.gov/Measure/AppropriateTreatmentforUpperRespiratoryInfectionURIFHIR",
+    "definitionURL": "https://ecqi.healthit.gov/ecqm/ec/2024/cms0154v12"
+  },
+  {
+    "name": "Use of High-Risk Medications in Older Adults",
+    "identifier": "CMS 156", 
+    "keyURL": "http://ecqi.healthit.gov/ecqms/Measure/UseofHighRiskMedicationsintheElderlyFHIR",
+    "definitionURL": "https://ecqi.healthit.gov/ecqm/ec/2024/cms0156v12"
+  },
+  {
+    "name": "Use of High-Risk Medications in Older Adults",
+    "identifier": "CMS 156", 
+    "keyURL": "https://madie.cms.gov/Measure/UseofHighRiskMedicationsintheElderlyFHIR",
+    "definitionURL": "https://ecqi.healthit.gov/ecqm/ec/2024/cms0156v12"
+  },
+  {
+    "name": "Oncology: Medical and Radiation - Pain Intensity Quantified",
+    "identifier": "CMS 157", 
+    "keyURL": "https://madie.cms.gov/Measure/OncologyPainIntensityQuantifiedFHIR",
+    "definitionURL": "https://ecqi.healthit.gov/ecqm/ec/2024/cms0157v12"
+  },
+  {
+    "name": "Depression Remission at Twelve Months",
+    "identifier": "CMS 159", 
+    "keyURL": "https://madie.cms.gov/Measure/DepressionRemissionatTwelveMonthsFHIR",
+    "definitionURL": "https://ecqi.healthit.gov/ecqm/ec/2024/cms0159v12"
+  },
+  {
+    "name": "Controlling High Blood Pressure",
+    "identifier": "CMS 165", 
+    "keyURL": "https://madie.cms.gov/Measure/ControllingHighBloodPressureFHIR",
+    "definitionURL": "https://ecqi.healthit.gov/ecqm/ec/2024/cms0165v12"
+  },
+  {
+    "name": "Child and Adolescent Major Depressive Disorder (MDD): Suicide Risk Assessment",
+    "identifier": "CMS 177", 
+    "keyURL": "https://madie.cms.gov/Measure/ChildandAdolescentMajorDepressiveDisorderMDDSuicideRiskAssessmentFHIR",
+    "definitionURL": "https://ecqi.healthit.gov/ecqm/ec/2024/cms0177v12"
+  },
+  {
+    "name": "Intensive Care Unit Venous Thromboembolism Prophylaxis",
+    "identifier": "CMS 190", 
+    "keyURL": "https://madie.cms.gov/Measure/IntensiveCareUnitVenousThromboembolismProphylaxisFHIR",
+    "definitionURL": "https://ecqi.healthit.gov/ecqm/eh/2024/cms0190v12"
+  },
+  {
+    "name": "Preventive Care and Screening: Screening for High Blood Pressure and Follow-Up Documented",
+    "identifier": "CMS 22", 
+    "keyURL": "https://madie.cms.gov/Measure/PCSBPScreeningFollowUpFHIR",
+    "definitionURL": "https://ecqi.healthit.gov/ecqm/ec/2024/cms0022v12"
+  },
+  {
+    "name": "Preventive Care and Screening: Screening for Depression and Follow-Up Plan",
+    "identifier": "CMS 2", 
+    "keyURL": "https://madie.cms.gov/Measure/PCSDepressionScreenAndFollowUpFHIR",
+    "definitionURL": "https://ecqi.healthit.gov/ecqm/ec/2024/cms0002v13"
+  },
+  {
+    "name": "HIV Viral Suppression",
+    "identifier": "CMS 314", 
+    "keyURL": "https://madie.cms.gov/Measure/HIVViralSuppressionFHIR",
+    "definitionURL": "https://ecqi.healthit.gov/ecqm/ec/2024/cms0314v1"
+  },
+  {
+    "name": "Cesarean Birth",
+    "identifier": "CMS 334", 
+    "keyURL": "http://ecqi.healthit.gov/ecqms/Measure/CesareanBirthFHIR",
+    "definitionURL": "https://ecqi.healthit.gov/ecqm/eh/2024/cms0334v5"
+  },
+  {
+    "name": "Cesarean Birth",
+    "identifier": "CMS 334", 
+    "keyURL": "https://madie.cms.gov/Measure/CesareanBirthFHIR",
+    "definitionURL": "https://ecqi.healthit.gov/ecqm/eh/2024/cms0334v5"
+  },
+  {
+    "name": "Statin Therapy for the Prevention and Treatment of Cardiovascular Disease",
+    "identifier": "CMS 347", 
+    "keyURL": "https://madie.cms.gov/Measure/StatinTherapyforthePreventionandTreatmentofCardiovascularDiseaseFHIR",
+    "definitionURL": "https://ecqi.healthit.gov/ecqm/ec/2024/cms0347v7"
+  },
+  {
+    "name": "HIV Screening",
+    "identifier": "CMS 349", 
+    "keyURL": "https://madie.cms.gov/Measure/HIVScreeningFHIR",
+    "definitionURL": "https://ecqi.healthit.gov/ecqm/ec/2024/cms0349v6"
+  },
+  {
+    "name": "Safe Use of Opioids - Concurrent Prescribing",
+    "identifier": "CMS 506", 
+    "keyURL": "https://madie.cms.gov/Measure/SafeUseofOpioidsConcurrentPrescribingFHIR",
+    "definitionURL": "https://ecqi.healthit.gov/ecqm/eh/2024/cms0506v6"
+  },
+  {
+    "name": "Bone density evaluation for patients with prostate cancer and receiving androgen deprivation therapy",
+    "identifier": "CMS 645", 
+    "keyURL": "https://madie.cms.gov/Measure/BoneDensityProstateCancerAndrogenDeprivationTherapyFHIR",
+    "definitionURL": "https://ecqi.healthit.gov/ecqm/ec/2024/cms0645v7"
+  },
+  {
+    "name": "Intravesical Bacillus-Calmette-Guerin for non-muscle invasive bladder cancer",
+    "identifier": "CMS 646", 
+    "keyURL": "https://madie.cms.gov/Measure/IntravesicalBacillusCalmetteGuerinForBladderCancerFHIR",
+    "definitionURL": "https://ecqi.healthit.gov/ecqm/ec/2024/cms0646v4"
+  },
+  {
+    "name": "Preventive Care and Screening: Body Mass Index (BMI) Screening and Follow-Up Plan",
+    "identifier": "CMS 69", 
+    "keyURL": "https://madie.cms.gov/Measure/PCSBMIScreenAndFollowUpFHIR",
+    "definitionURL": "https://ecqi.healthit.gov/ecqm/ec/2024/cms0069v12"
+  },
+  {
+    "name": "Anticoagulation Therapy for Atrial Fibrillation/Flutter",
+    "identifier": "CMS 71", 
+    "keyURL": "https://madie.cms.gov/Measure/AnticoagulationTherapyforAtrialFibrillationFlutterFHIR",
+    "definitionURL": "https://ecqi.healthit.gov/ecqm/eh/2024/cms0071v13"
+  },
+  {
+    "name": "Antithrombotic Therapy By End of Hospital Day 2",
+    "identifier": "CMS 72", 
+    "keyURL": "https://madie.cms.gov/Measure/AntithromboticTherapyByEndofHospitalDay2FHIR",
+    "definitionURL": "https://ecqi.healthit.gov/ecqm/eh/2024/cms0072v12"
+  },
+  {
+    "name": "Hospital Harm - Severe Hypoglycemia",
+    "identifier": "CMS 816", 
+    "keyURL": "https://madie.cms.gov/Measure/HospitalHarmSevereHypoglycemiaFHIR",
+    "definitionURL": "https://ecqi.healthit.gov/ecqm/eh/2024/cms0816v3"
+  },
+  {
+    "name": "Hospital Harm - Opioid-Related Adverse Events",
+    "identifier": "CMS 819", 
+    "keyURL": "https://madie.cms.gov/Measure/HospitalHarmOpioidRelatedAdverseEventsFHIR",
+    "definitionURL": "https://ecqi.healthit.gov/ecqm/eh/2024/cms0819v2"
+  },
+  {
+    "name": "Kidney Health Evaluation",
+    "identifier": "CMS 951", 
+    "keyURL": "https://madie.cms.gov/Measure/KidneyHealthEvaluationFHIR",
+    "definitionURL": "https://ecqi.healthit.gov/ecqm/ec/2024/cms0951v2"
+  },
+  {
+    "name": "Appropriate Treatment for ST-Segment Elevation Myocardial Infarction (STEMI) Patients in the Emergency Department (ED)",
+    "identifier": "CMS 996", 
+    "keyURL": "http://ecqi.healthit.gov/ecqms/Measure/AppropriateTreatmentforSTEMIFHIR",
+    "definitionURL": "https://ecqi.healthit.gov/ecqm/oqr/2024/cms0996v4"
+  },
+  {
+    "name": "Appropriate Use of DXA Scans in Women Under 65 Years Who Do Not Meet the Risk Factor Profile for Osteoporotic Fracture",
+    "identifier": "CMS 249", 
+    "keyURL": "https://madie.cms.gov/Measure/AppropriateDXAScansForWomenUnder65FHIR",
+    "definitionURL": "https://ecqi.healthit.gov/ecqm/ec/2024/cms0249v6"
+  },
+  {
+    "name": "Documentation of Current Medications in the Medical Record",
+    "identifier": "CMS 68", 
+    "keyURL": "https://madie.cms.gov/Measure/DocumentationofCurrentMedicationsFHIR",
+    "definitionURL": "https://ecqi.healthit.gov/ecqm/ec/2024/cms0068v13"
+  },
+  {
+    "name": "Urinary Symptom Score Change 6-12 Months After Diagnosis of Benign Prostatic Hyperplasia",
+    "identifier": "CMS 771", 
+    "keyURL": "https://madie.cms.gov/Measure/UrinarySymptomScoreChangeAfterBenignProstaticHyperplasiaFHIR",
+    "definitionURL": "https://ecqi.healthit.gov/ecqm/ec/2024/cms0771v5"
+  },
+  {
+    "name": "Global Malnutrition Composite Score",
+    "identifier": "CMS 986", 
+    "keyURL": "https://madie.cms.gov/Measure/GlobalMalnutritionCompositeFHIR",
+    "definitionURL": "https://ecqi.healthit.gov/ecqm/eh/2024/cms0986v2"
+  },
+  {
+    "name": "Core Clinical Data Elements for the Hybrid Hospital-Wide (All-Condition, All-Procedure) Risk-Standardized Mortality Measure (HWM)",
+    "identifier": "CMS 844 - Hybrid", 
+    "keyURL": "https://madie.cms.gov/Measure/HybridHospitalWideMortalityFHIR",
+    "definitionURL": "https://ecqi.healthit.gov/ecqm/eh/2024/cms0844v4"
+  },
+  {
+    "name": "Core Clinical Data Elements for the Hybrid Hospital-Wide Readmission (HWR) Measure with Claims and Electronic Health Record Data",
+    "identifier": "CMS 529 - Hybrid", 
+    "keyURL": "https://madie.cms.gov/Measure/HybridHospitalWideReadmissionFHIR",
+    "definitionURL": "https://ecqi.healthit.gov/ecqm/eh/2024/cms0529v4"
+  },
+  {
+    "name": "Closing the Referral Loop: Receipt of Specialist Report",
+    "identifier": "CMS 50", 
+    "keyURL": "https://madie.cms.gov/Measure/CRLReceiptofSpecialistReportFHIR",
+    "definitionURL": "https://ecqi.healthit.gov/ecqm/ec/2024/cms0050v12"
+  },
+  {
+    "name": "Functional Status Assessment for Total Hip Replacement",
+    "identifier": "CMS 56", 
+    "keyURL": "https://madie.cms.gov/Measure/FunctionalStatusAssessmentforTotalHipReplacementFHIR",
+    "definitionURL": "https://ecqi.healthit.gov/ecqm/ec/2024/cms0056v12"
+  },
+  {
+    "name": "Primary Caries Prevention Intervention as Offered by Dentists",
+    "identifier": "CMS 74", 
+    "keyURL": "https://madie.cms.gov/Measure/PrimaryCariesPreventionasOfferedbyDentistsFHIR",
+    "definitionURL": "https://ecqi.healthit.gov/ecqm/ec/2024/cms0074v13"
+  },
+  {
+    "name": "Children Who Have Dental Decay or Cavities",
+    "identifier": "CMS 75", 
+    "keyURL": "https://madie.cms.gov/Measure/ChildrenWhoHaveDentalDecayOrCavitiesFHIR", 
+    "definitionURL": "https://ecqi.healthit.gov/ecqm/ec/2024/cms0075v12"
+  },
+  {
+    "name": "Functional Status Assessments for Heart Failure (CMS 90)",
+    "identifier": "CMS 90", 
+    "keyURL": "https://madie.cms.gov/Measure/FunctionalStatusAssessmentsforHeartFailureFHIR",
+    "definitionURL": "https://ecqi.healthit.gov/ecqm/ec/2024/cms0090v13"
+  },
+  {
+    "name": "Cervical Cancer Screening",
+    "identifier": "CMS 124", 
+    "keyURL": "https://madie.cms.gov/Measure/CervicalCancerScreeningFHIR",
+    "definitionURL": "https://ecqi.healthit.gov/ecqm/ec/2024/cms0124v12"
+  },
+  {
+    "name": "Breast Cancer Screening",
+    "identifier": "CMS 125", 
+    "keyURL": "https://madie.cms.gov/Measure/BreastCancerScreeningFHIR",
+    "definitionURL": "https://ecqi.healthit.gov/ecqm/ec/2024/cms0125v12"
+  },
+  {
+    "name": "Anti-depressant Medication Management",
+    "identifier": "CMS 128", 
+    "keyURL": "https://madie.cms.gov/Measure/AntidepressantMedicationManagementFHIR",
+    "definitionURL": "https://ecqi.healthit.gov/ecqm/ec/2024/cms0128v12"
+  },
+  {
+    "name": "Diabetes: Eye Exam",
+    "identifier": "CMS 131", 
+    "keyURL": "https://madie.cms.gov/Measure/DiabetesEyeExamFHIR",
+    "definitionURL": "https://ecqi.healthit.gov/ecqm/ec/2024/cms0131v12"
+  },
+  {
+    "name": "Heart Failure (HF): Angiotensin-Converting Enzyme (ACE) Inhibitor or Angiotensin Receptor Blocker (ARB) or Angiotensin Receptor-Neprilysin Inhibitor (ARNI) Therapy for Left Ventricular Systolic Dysfunction (LVSD)",
+    "identifier": "CMS 135", 
+    "keyURL": "https://madie.cms.gov/Measure/HFACEIorARBorARNIforLVSDFHIR",
+    "definitionURL": "https://ecqi.healthit.gov/ecqm/ec/2024/cms0135v12"
+  },
+  {
+    "name": "Initiation and Engagement of Substance Use Disorder Treatment",
+    "identifier": "CMS 137", 
+    "keyURL": "https://madie.cms.gov/Measure/InitiationandEngagementofSubstanceUseDisorderTreatmentFHIR",
+    "definitionURL": "https://ecqi.healthit.gov/ecqm/ec/2024/cms0137v12"
+  },
+  {
+    "name": "Preventive Care and Screening: Tobacco Use: Screening and Cessation Intervention",
+    "identifier": "CMS 138", 
+    "keyURL": "https://madie.cms.gov/Measure/PreventiveCareAndTobaccoUseScreeningAndCessationInterventionFHIR",
+    "definitionURL": "https://ecqi.healthit.gov/ecqm/ec/2024/cms0138v12"
+  },
+  {
+    "name": "Appropriate Testing for Pharyngitis",
+    "identifier": "CMS 146", 
+    "keyURL": "https://madie.cms.gov/Measure/AppropriateTestingforPharyngitisFHIR",
+    "definitionURL": "https://ecqi.healthit.gov/ecqm/ec/2024/cms0146v12"
+  },
+  {
+    "name": "Weight Assessment and Counseling for Nutrition and Physical Activity for Children/Adolescents",
+    "identifier": "CMS 155", 
+    "keyURL": "https://madie.cms.gov/Measure/WeightAssessmentandCounselingforNutritionandPhysicalActivityforChildrenandAdolescentsFHIR",
+    "definitionURL": "https://ecqi.healthit.gov/ecqm/ec/2024/cms0155v12"
+  },
+  {
+    "name": "Hospital Harm - Severe Hyperglycemia",
+    "identifier": "CMS 871", 
+    "keyURL": "https://madie.cms.gov/Measure/HospitalHarmHyperglycemiainHospitalizedPatientsFHIR",
+    "definitionURL": "https://ecqi.healthit.gov/ecqm/eh/2024/cms0871v3"
+  },
+  {
+    "name": "Hospital Harm - Severe Hypoglycemia",
+    "identifier": "CMS 816", 
+    "keyURL": "",
+    "definitionURL": "https://ecqi.healthit.gov/ecqm/eh/2024/cms0816v3"
+  }
+]

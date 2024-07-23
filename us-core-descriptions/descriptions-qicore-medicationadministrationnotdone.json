@@ -1,0 +1,8 @@
+{
+    "MedicationAdministration.status": "a status of medication adminsitration",
+    "MedicationAdministration.medication": "a medication",
+    "MedicationAdministration.effective": "a time the medication was to have been administered",
+    "MedicationAdministration.statusReason": "why the administration was not performed", 
+    "MedicationAdministration.extension:recorded": "When the MedicationAdministration was first captured in the subject's record", 
+    "MedicationAdministration.subject": "a patient", 
+    "MedicationAdministration.context": "an encounter" }

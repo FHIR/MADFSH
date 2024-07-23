@@ -1,0 +1,7 @@
+{
+    "CarePlan.status": "a status",
+    "CarePlan.intent": "an intent",
+    "CarePlan.category": "a category code of 'assess-plan",
+    "CarePlan.subject": "a patient",
+    "CarePlan.text": "a narrative summary of the patient assessment and plan of treatment"
+}

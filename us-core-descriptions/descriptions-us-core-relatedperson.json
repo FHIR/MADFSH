@@ -1,0 +1,8 @@
+{
+    "RelatedPerson.active": "a status",
+    "RelatedPerson.patient": "a patient",
+    "RelatedPerson.relationship": "the relationship to the patient",
+    "RelatedPerson.name": "the name of the related person",
+    "RelatedPerson.telecom": "the telecom of the related person",
+    "RelatedPerson.address": "the address of the related person"
+}

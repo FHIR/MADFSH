@@ -1,0 +1,9 @@
+{
+    "MedicationAdministration.status": "a status of medication adminsitration (e.g., in-progress, on-hold)",
+    "MedicationAdministration.medication": "a medication",
+    "MedicationAdministration.effective": "a time the medication was administered",
+    "MedicationAdministration.statusReason": "reason for the status", 
+    "MedicationAdministration.subject": "a patient", 
+    "MedicationAdministration.context": "an encounter",
+    "MedicationAdministration.reasonCode": "reason for medication"
+}

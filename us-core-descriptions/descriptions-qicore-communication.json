@@ -1,0 +1,14 @@
+{
+    "Communication.status": "a status identifying the lifecycle stage fo the communication event",
+    "Communication.sent": "the time when this communication was sent.",
+    "Communication.reasonCode": "the reason for the communication",
+    "Communication.statusReason": "the reason for the current state of communication - generally only used for exception statuses",
+    "Communication.category": "code for general categories of communications (e.g., alerts, instructions)",
+    "Communication.medium": "channel of message communication",    
+    "Communication.subject": "a patient",  
+    "Communication.topic": "topic of message",  
+    "Communication.encounter": "when message sent",  
+    "Communication.received": "when message received",  
+    "Communication.recipient": "message recipient",  
+    "Communication.sender": "message sender"
+}

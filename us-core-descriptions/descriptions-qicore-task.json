@@ -1,0 +1,9 @@
+{
+    "Task.status": "status of the fulfillment of a referral or patient assigned to-do",
+    "Task.intent": "whether the task is a proposal, plan, or full order",
+    "Task.priority": "indicates how quickly the Task should be addressed with respect to other requests",
+    "Task.code": "a code indicating the type of task",
+    "Task.basedOn": "what triggered the task",
+    "Task.executionPeriod": "perfomance period for the task", 
+    "Task.identifier": "business identifier of the task"
+}

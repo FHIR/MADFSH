@@ -1,0 +1,5 @@
+{
+    "MedicationRequest.dosageInstruction": "the dose and rate",
+    "MedicationRequest.category:us-core": "type of medication usage",
+    "MedicationRequest.doNotPerform": "If true, indicates that the provider is asking for the patient to either stop taking or to not start taking the specified medication."
+}

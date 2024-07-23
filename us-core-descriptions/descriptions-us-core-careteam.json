@@ -1,0 +1,6 @@
+{
+    "CarePlan.subject": "a patient",
+    "CarePlan.participant": "a participant role for each careteam members",
+    "CarePlan.participant.member": "a reference to each careteam member which can be: * a practitioner or practitioner type (doctor, nurse, therapist) * a relative or friend or guardian ",
+    "CarePlan.status": "a status code"
+}
