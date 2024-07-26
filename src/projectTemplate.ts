@@ -13,7 +13,7 @@ export function initMADFSHProject(projectDirName: string) {
 
         const replaceMap = new Map([
             ['<INPUTROOT>', path.join(targetDir, 'madfsh-input')],
-            ['<OUTPUTROOT>', targetDir],
+            ['<PROJECTROOT>', targetDir],
             ['<PROJECTNAME>', path.basename(projectDirName)],
             ['<PACKAGE>', `fhir.${path.basename(projectDirName).toLowerCase()}`]
         ]);

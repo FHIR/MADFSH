@@ -1,7 +1,7 @@
 {
     "projectName": "<PROJECTNAME>",
     "inputRoot": "<INPUTROOT>",
-    "outputRoot": "<OUTPUTROOT>",
+    "outputRoot": "<PROJECTROOT>",
     "inputFileList": [],
     "remoteProfile": true,
     "profileURLReplace": [
