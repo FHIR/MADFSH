@@ -47,13 +47,14 @@ export function loadMeasureBundle(
         files.forEach(function (oneFile) {
             if (oneFile.includes('.json')) {
                 if (filenames.includes(oneFile) || filenames.length == 0) {
-                    logger.info('Loading file: ' + oneFile);
-                    fileCnt++;
+                    
                     const json = fs.readFileSync(directoryPath + oneFile, {
                         encoding: 'utf8',
                         flag: 'r'
                     });
                     if (JSON.parse(json).resourceType === 'Bundle') {
+                        logger.info('Loading file: ' + oneFile);
+                        fileCnt++;
                         jsons.push({ fileName: oneFile, json: json });
                     }
                 }

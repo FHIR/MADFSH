@@ -65,11 +65,12 @@ conversion.
     -   *target*: profile URL that will be used instead
 -   **measureExtensionURL**: url defining the extension to use for indicating
     measure that use a profile or element.
--   **measureLinkFile**: file path location for a file that includes measure
-    details. The file MUST contain a `json` list of object each with the
-    following three keys:
+-   **measureLinkFile**: file path relative to the **inputRoot** for a file
+    that includes measure details such as an identifier. The file MUST 
+    contain a `json` list of objects each with the following four keys:
     -   *name*: short name of the measure used for display in the generated 
         narrative.
+    -   *identifier*: id for the measure.
     -   *keyURL*: url used to identify the measure within the measure files.
     -   *definitionURL*: resolvable url that contains measure details used to
         populate links in the generated narrative.
@@ -154,6 +155,16 @@ requirements:
 These pre-requisites are consistent with how FHIR-based measures are currently
 authored and distributed, such as from [MADiE](https://ecqi.healthit.gov/tool/madie).
 
+##### Optional Additional Inputs
+
+Because the FHIR-based infrastructure for measure publishing is not yet in place,
+additional details on the measure, such as the an identifier like the CMS number
+and a link to a publicly-available definition of the measure, are not avilable
+directly from the measure. In order to provide this information, an additional
+measure details file following the format specified in the **measureLinkFile** 
+configuration optional can be provided as an input as well. The IG can be generated
+without this information, but the output will be nicer with it.
+
 #### System
 
 The following software needs to be installed on your system in order to install and run MADFSH and the rest of the toolchain.
@@ -172,8 +183,19 @@ Note the parent `<source>` directory and the `<source>/<MADFSH source>` director
 
 1.  From a terminal in the `<source>/<MADFSH source>` directory, execute the command `ts-node src/app.ts init-madfsh-project <project root>`. This will create a `<source>/<project root>` folder.
 2.  Place the measure bundle files into
-    the `<project root>/madfsh-input` folder: this is where MADFSH will look to find them. You can delete the `measure_json_files_go_here` file in that directory, but MADFSH will ignore it you do not remove it.
-3.  Place any available example instance files in the `<project root>/madfsh-input/examples` folder. You can delete the `example_json_files_go_here` file in that directory , but MADFSH will ignore it you do not remove it.
+    the `<project root>/madfsh-input` folder: this is where MADFSH will look to find
+    them. You can delete the `measure_json_files_go_here` file in that directory,
+    but MADFSH will ignore it you do not remove it.
+3.  Place any available example instance files in the
+    `<project root>/madfsh-input/examples` folder. You can delete the
+    `example_json_files_go_here` file in that directory, but MADFSH will
+    ignore it you do not remove it.
+4.  If you have a measure details file, place it in the `<project root>/madfsh-input`
+    directory and update the `<project root>/madfsh-input.json` file with a path to
+    that file relative to `<project root>`. For example, if the file is
+    `measure-details.json` and is the in the `madfsh-input` folder, then the path
+    to use would be `madfsh-input/measure-details.json`
+
 
 ### MADFSH execution
 
@@ -201,15 +223,18 @@ Follow the prompts to get the publisher downloaded.
 In a terminal navigate to the `<project root>` directory
 and execute: 
 
-`./_genonce.sh` (for Mac) `./_genonce.bat` (for Windows)
+`./_madfsh_genonce.sh` (for Mac) `./_madfsh_genonce.bat` (for Windows)
 
 This will run through the standard IG publication logic, resulting in content within
-the `output` directory. You can find and open the `index.html` file in a web browser
-to access the generated IG, or alternatively open the `igShortcut.html` file in you
-`<project root>` directory, which will redirect you to the IG home page.
+the `output` directory. You can open the `igShortcut.html` file in your
+`<project root>` directory, which will redirect you to the IG home page, 
+or alternatively find and open the `index.html` or other target file from
+the `output` folder in a web browser to access the generated IG. Using the `_madfsh`
+version of the scripts will also copy compressed files with ig content to
+the `distribution` folder.
 
 #### Additional information on _genonce and _gencontinuous 
-Included in this repository is both the _genonce and _gencontinuous IG scripts relevant to the IG publisher. More information on the difference between these scripts is documented in the [IG Publisher Scripts Repository](https://github.com/HL7/ig-publisher-scripts).
+Included in this repository is both the standard _genonce and _gencontinuous IG scripts relevant to the IG publisher. More information on the difference between these scripts is documented in the [IG Publisher Scripts Repository](https://github.com/HL7/ig-publisher-scripts).
 
 ### Next Steps
 
