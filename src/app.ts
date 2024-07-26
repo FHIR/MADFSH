@@ -155,7 +155,7 @@ program
         logger.info('*******************************************************');
         logger.info('');
 
-        const dr = aggr.reorgDataRequirementWithMeasure(bundles, settings);
+        const dr = aggr.reorgDataRequirementWithMeasure(bundles, runtimeSettings);
         if (runtimeSettings.createDataReqJSON)
             util.createFile('aggr-data-require.json', JSON.stringify(dr, null, 2));
 

@@ -342,6 +342,12 @@ During this step, MADFSH is loading the input measures.
 Errors logged during this step typically indicate that the format of the input
 measures was incorrect or corrupted in some way.
 
+If a a warning of the form `Measure link details not present for measure...` appears,
+that is an indication that the measure link file doesn't have details
+for the indicated measure URL. Details for the indicated measure should be
+added to the measure link file, either the project-specific one of the default
+if in use. See the **measureLinkFile** configuration option for details.
+
 ### Aggregating Data Requirements Across Measures
 
 During this step, MADFSH is pulling the data requirements out of the input
