@@ -194,7 +194,7 @@ Note the parent `<source>` directory and the `<source>/<MADFSH source>` director
     directory and update the `<project root>/madfsh-input.json` file with a path to
     that file relative to `<project root>`. For example, if the file is
     `measure-details.json` and is the in the `madfsh-input` folder, then the path
-    to use would be `madfsh-input/measure-details.json`
+    to use would be `"measureLinkFile": measure-details.json`.
 
 
 ### MADFSH execution
