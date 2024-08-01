@@ -7,6 +7,7 @@ import YAML from 'yaml';
 const DEFAULT_INPUT_ROOT = 'measure_input/';
 const DEFAULT_OUTPUT_ROOT = './';
 const DEFAULT_EXAMPLE_OUTPUT = 'input/examples/';
+const DEFAULT_MEASURE_LINK_FILE = 'src/narrative-mappings/measure-link.json';
 
 export type ValueSetDetails = {
     url: string;
@@ -88,10 +89,12 @@ export type RuntimeSettings = {
 };
 
 export function settingsToRuntime(settings: Settings): RuntimeSettings {
+    const inputRoot = settings.inputRoot
+        ? `${settings.inputRoot}${settings.inputRoot.endsWith('/') ? '' : '/'}`
+        : DEFAULT_INPUT_ROOT
+    
     return {
-        inputRoot: settings.inputRoot
-            ? `${settings.inputRoot}${settings.inputRoot.endsWith('/') ? '' : '/'}`
-            : DEFAULT_INPUT_ROOT,
+        inputRoot: inputRoot,
         outputRoot: settings.outputRoot
             ? `${settings.outputRoot}${settings.outputRoot.endsWith('/') ? '' : '/'}`
             : DEFAULT_OUTPUT_ROOT,
@@ -101,7 +104,7 @@ export function settingsToRuntime(settings: Settings): RuntimeSettings {
         remoteProfile: settings.remoteProfile,
         profileURLReplace: sourceTargetListToMap(settings.profileURLReplace),
         measureExtensionURL: settings.measureExtensionURL,
-        measureLink: loadMeasureLinkToMap(settings.measureLinkFile),
+        measureLink: loadMeasureLinkToMap(inputRoot, settings.measureLinkFile),
         valueSetDetails: valueSetDetailsToMap(settings),
         codeDetails: codeDetailsToMap(settings),
         elementDetailOverrides: elementDetailsOverridesToMap(settings),
@@ -127,14 +130,22 @@ export function loadSettingsFile(filepath: string): Settings {
     return JSON.parse(fs.readFileSync(filepath, 'utf-8'));
 }
 
-function loadMeasureLinkToMap(filepath: string) {
-    const list: { name: string; identifier: string; keyURL: string; definitionURL: string }[] =
-        JSON.parse(fs.readFileSync(filepath, { encoding: 'utf8', flag: 'r' }));
+function loadMeasureLinkToMap(inputRoot: string, filepath: string) {
+    let list: { name: string; identifier: string; keyURL: string; definitionURL: string }[];
+    if (filepath != '') {
+        // load from project-specific file
+        list = JSON.parse(fs.readFileSync(path.join(inputRoot, filepath), { encoding: 'utf8', flag: 'r' }));
+    }
+    else {
+        // load from the default file
+        list = JSON.parse(fs.readFileSync(DEFAULT_MEASURE_LINK_FILE, { encoding: 'utf8', flag: 'r' }));
+    }
+
     const map = new Map<
         string,
         { name: string; identifier: string; keyURL: string; definitionURL: string }
     >();
-    list.forEach(entry => {
+    list?.forEach(entry => {
         if (map.has(entry.keyURL) && entry.keyURL != '') {
             logger.warn('duplicate configuration for keyURL : ' + entry.keyURL);
         } else {

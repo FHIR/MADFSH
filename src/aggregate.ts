@@ -1,5 +1,5 @@
 import fhir4, { Extension, Coding } from 'fhir/r4';
-import { Settings } from './settings';
+import {RuntimeSettings } from './settings';
 import {
     KeyFilterElementForResourceType,
     ResourceTypesWithoutKeyFilterElements,
@@ -47,13 +47,14 @@ export function loadMeasureBundle(
         files.forEach(function (oneFile) {
             if (oneFile.includes('.json')) {
                 if (filenames.includes(oneFile) || filenames.length == 0) {
-                    logger.info('Loading file: ' + oneFile);
-                    fileCnt++;
+                    
                     const json = fs.readFileSync(directoryPath + oneFile, {
                         encoding: 'utf8',
                         flag: 'r'
                     });
                     if (JSON.parse(json).resourceType === 'Bundle') {
+                        logger.info('Loading file: ' + oneFile);
+                        fileCnt++;
                         jsons.push({ fileName: oneFile, json: json });
                     }
                 }
@@ -102,13 +103,14 @@ export function reorgDataRequirementWithMeasure(
         fileName: string;
         json: string;
     }[],
-    settings: Settings
+    settings: RuntimeSettings
 ): DataReqOutputs[] {
     const dataReqOutputs: DataReqOutputs[] = [];
 
     bundles.forEach((b: { fileName: string; json: string }) => {
         const bundle = JSON.parse(b.json) as fhir4.Bundle;
         let measureName: string = '';
+        let measureUrl: string = ''
         let measureId: string = '';
         let measureFlg = false;
         let measureExt: Extension;
@@ -125,6 +127,7 @@ export function reorgDataRequirementWithMeasure(
                 if (measureId.length === 0) {
                     logger.warn(`Measure with no id in ${b.fileName}, will process all libraries`);
                 }
+                measureUrl = entry.resource.url ?? '';
                 measureExt = {
                     url: settings.measureExtensionURL,
                     valueString: entry.resource.url
@@ -132,8 +135,16 @@ export function reorgDataRequirementWithMeasure(
             }
         });
 
+        if (measureName === '') {
+            logger.error(`no measure found in file ${b.fileName}`)
+            return dataReqOutputs;
+        }
+
         logger.info('');
-        logger.info(`** Processing measure ${measureName} in file ${b.fileName}`);
+        logger.info(`** Processing measure ${measureName} (${measureUrl}) in file ${b.fileName}`);
+        if (!settings.measureLink.has(measureUrl)) {
+            logger.warn(`Measure link details not present for measure ${measureName} (${measureUrl})`)
+        }
 
         // Extract Libraries only if there's Measure in the bundle
         if (measureFlg) {

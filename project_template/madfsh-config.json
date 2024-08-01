@@ -1,7 +1,7 @@
 {
     "projectName": "<PROJECTNAME>",
     "inputRoot": "<INPUTROOT>",
-    "outputRoot": "<OUTPUTROOT>",
+    "outputRoot": "<PROJECTROOT>",
     "inputFileList": [],
     "remoteProfile": true,
     "profileURLReplace": [
@@ -35,7 +35,7 @@
         }
     ],
     "measureExtensionURL": "http://hl7.org/fhir/us/measureset/StructureDefinition/used-by-measures",
-    "measureLinkFile": "src/narrative-mappings/measure-link.json",
+    "measureLinkFile": "",
     "valueSetDetails": [],
     "codeDetails": [],
     "elementDetailOverrides": [],
