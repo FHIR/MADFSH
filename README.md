@@ -191,7 +191,7 @@ Note the parent `<source>` directory and the `<source>/<MADFSH source>` director
     `example_json_files_go_here` file in that directory, but MADFSH will
     ignore it you do not remove it.
 4.  If you have a measure details file, place it in the `<project root>/madfsh-input`
-    directory and update the `<project root>/madfsh-input.json` file with a path to
+    directory and update the `<project root>/madfsh-config.json` file with a path to
     that file relative to `<project root>`. For example, if the file is
     `measure-details.json` and is the in the `madfsh-input` folder, then the path
     to use would be `"measureLinkFile": measure-details.json`.
