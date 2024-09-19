@@ -15,3 +15,9 @@ Description: "Information about how an element associated with value sets. This 
 * extension[valueSetTarget].value[x] only string
 * extension[codeTarget].value[x] only Coding
 
+Extension: ProgramName
+Id:        program-name
+Title:     "Program Name" 
+Description: "Name of the quality measurement program that the IG relates to. This extension is intended to be used on ImplementationGuide instances." 
+* value[x] only string
+
