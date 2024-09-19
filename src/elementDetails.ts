@@ -1,6 +1,6 @@
 import { logger } from './logger';
 import { DataReqOutputs } from './aggregate';
-import { RuntimeSettings, ValueSetDetails, CodeDetails } from './settings';
+import { RuntimeSettings, ValueSetDetails, CodeDetails } from './config/settings';
 import axios from 'axios';
 import request from 'sync-request';
 import { StructureDefinition } from 'fhir/r4';

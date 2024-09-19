@@ -1,5 +1,5 @@
 import fhir4, { Extension, Coding } from 'fhir/r4';
-import { RuntimeSettings } from './settings';
+import { RuntimeSettings } from './config/settings';
 import {
   KeyFilterElementForResourceType,
   ResourceTypesWithoutKeyFilterElements,
