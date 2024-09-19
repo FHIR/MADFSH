@@ -12,9 +12,9 @@ import * as elts from './elementDetails';
 import {
   Settings,
   settingsToRuntime,
-  loadSettingsFile,
-  identifyAndLoadDependencyPackages
-} from './settings';
+  loadSettingsFile
+} from './config/settings';
+import { identifyAndLoadDependencyPackages } from './config/fhirPackages';
 import { initMADFSHProject } from './projectTemplate';
 
 const VERSION = '0.5.0';

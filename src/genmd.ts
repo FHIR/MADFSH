@@ -1,5 +1,5 @@
 import { logger } from './logger';
-import { RuntimeSettings } from './settings';
+import { RuntimeSettings } from './config/settings';
 import * as util from './util';
 import {
   CodeOrValueSetFilter,

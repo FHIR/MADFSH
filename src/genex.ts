@@ -1,5 +1,5 @@
 import * as fs from 'fs';
-import { RuntimeSettings } from './settings';
+import { RuntimeSettings } from './config/settings';
 import path from 'path';
 import { ProfileDetail } from './elementDetails';
 import * as util from './util';

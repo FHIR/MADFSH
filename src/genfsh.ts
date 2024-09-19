@@ -1,6 +1,6 @@
 import fhir4 from 'fhir/r4';
 import { logger } from './logger';
-import { RuntimeSettings } from './settings';
+import { RuntimeSettings } from './config/settings';
 import * as fs from 'fs';
 import { ElementDetail, ProfileDetail } from './elementDetails';
 import { getMeasureListString } from './util';
