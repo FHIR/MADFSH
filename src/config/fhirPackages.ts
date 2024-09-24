@@ -1,4 +1,4 @@
-import { logger } from '../logger';
+import { logger } from '../common/logger';
 import * as fs from 'fs';
 import path from 'path';
 import { FHIRDefinitions, fpl } from 'fhir-package-loader';

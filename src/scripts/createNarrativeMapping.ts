@@ -1,6 +1,6 @@
 import fs from 'fs';
 import path from 'path';
-import { logger } from '../logger';
+import { logger } from '../common/logger';
 
 const mapping: Record<string, Record<string, string>> = {};
 const directoryPath = path.join(__dirname, '../../us-core-descriptions/');
