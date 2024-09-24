@@ -578,7 +578,7 @@ description file, use the `-n / --narrative-mapping` option:
 ts-node src/app.ts -n <file-name>
 ```
 
-### Using external terminology services
+## Using external terminology services
 
 MADFSH can use web calls to get VSAC value sets and LOINC code details. To do
 so, NLM API key and LOINC credentials need to be provided as parameters below.
@@ -596,13 +596,35 @@ documented below for the sake of clarity:
 -   Code auto-formatting: prettier; eslint
 -   Logging: winston
 
-### Development
+## Contributing
+
+### Code standards
 
 Run the following commands to keep code format consistent before commiting any
 changes: 
 
 - `npm run prettier-format` 
 - `npm run lint:fix`
+
+### High-level Architecture
+
+A MADFSH run proceeds through several steps. The code for each step is more
+or less encapsulated within a single file:
+
+- Setup (`config` folder)
+  - Load config (`config/settings.ts`)
+  - Load FHIR packages (`config/fhirPackages.ts`)
+- Analysis (`analysis folder`)
+  - Load target measures (`analysis/loadMeasures.ts`)
+  - Aggregate measure requirements (`analysis/aggregateRequirements.ts`)
+  - Gather value set details (`analysis/elementDetails.ts`)
+  - Identify profile elements (`analysis/terminologyDetails.ts`)
+- Generation (`generation` folder)
+  - Generate FSH content (`generation/generateFSH.ts`)
+  - Generate narrative markdown content (`generation/generateNarrative.ts`)
+  - Generate example content (`generate/generateExamples.ts`)
+
+The rest of this section provides a high-level overview of what happens d
 
 ## License
 

@@ -1,21 +1,23 @@
 import commander from 'commander';
-import * as util from './util';
-import * as aggr from './aggregate';
-import * as genfsh from './genfsh';
-import * as genmd from './genmd';
-import * as genex from './genex';
 import path from 'path';
-import { logger } from './logger';
+import { logger } from './common/logger';
 import { resolve } from 'path';
 import * as fs from 'fs';
-import * as elts from './elementDetails';
 import {
   Settings,
   settingsToRuntime,
   loadSettingsFile
 } from './config/settings';
 import { identifyAndLoadDependencyPackages } from './config/fhirPackages';
-import { initMADFSHProject } from './projectTemplate';
+import { loadMeasureBundle } from './analysis/loadMeasures';
+import { reorgDataRequirementWithMeasure } from './analysis/aggregateRequirements';
+import { fetchValueSetAndCodeDetails } from './analysis/terminologyDetails';
+import { prepareElementDetails } from './analysis/elementDetails';
+import { generateFSH } from './generation/generateFSH';
+import { generateMarkdown } from './generation/generateNarrative';
+import { generateExample } from './generation/generateExamples';
+import { createFile } from './common/util';
+import { initMADFSHProject } from './scripts/projectTemplate';
 
 const VERSION = '0.5.0';
 
@@ -126,7 +128,7 @@ program
     const runtimeSettings = settingsToRuntime(settings);
 
     // export the latest execution invocation - for update tracking
-    util.createFile(`${runtimeSettings.outputRoot}madfsh_invocation.txt`, executionDetailsString);
+    createFile(`${runtimeSettings.outputRoot}madfsh_invocation.txt`, executionDetailsString);
 
     logger.info('');
     logger.info('*******************************************************');
@@ -141,7 +143,7 @@ program
     logger.info('*******************************************************');
     logger.info('');
 
-    const bundles = aggr.loadMeasureBundle(
+    const bundles = loadMeasureBundle(
       runtimeSettings.inputRoot,
       runtimeSettings.inputFileList
     );
@@ -152,9 +154,9 @@ program
     logger.info('*******************************************************');
     logger.info('');
 
-    const dr = aggr.reorgDataRequirementWithMeasure(bundles, runtimeSettings);
+    const dr = reorgDataRequirementWithMeasure(bundles, runtimeSettings);
     if (runtimeSettings.createDataReqJSON)
-      util.createFile('aggr-data-require.json', JSON.stringify(dr, null, 2));
+      createFile('aggr-data-require.json', JSON.stringify(dr, null, 2));
 
     logger.info('');
     logger.info('*******************************************************');
@@ -162,7 +164,7 @@ program
     logger.info('*******************************************************');
     logger.info('');
 
-    await elts.fetchValueSetAndCodeDetails(dr, runtimeSettings);
+    await fetchValueSetAndCodeDetails(dr, runtimeSettings);
 
     logger.info('');
     logger.info('*******************************************************');
@@ -170,7 +172,7 @@ program
     logger.info('*******************************************************');
     logger.info('');
 
-    const profileDetails = await elts.prepareElementDetails(dr, runtimeSettings, narrativeFile);
+    const profileDetails = await prepareElementDetails(dr, runtimeSettings, narrativeFile);
 
     logger.info('');
     logger.info('*******************************************************');
@@ -178,9 +180,9 @@ program
     logger.info('*******************************************************');
     logger.info('');
 
-    util.createFile(
+    createFile(
       `${runtimeSettings.outputRoot}input/fsh/profiles.fsh`,
-      genfsh.generateFSH(profileDetails, runtimeSettings)
+      generateFSH(profileDetails, runtimeSettings)
     );
 
     logger.info('');
@@ -198,10 +200,10 @@ program
     });
 
     const createdFileMap = new Map();
-    genmd.generateMarkdown(profileDetails, runtimeSettings).forEach(md => {
+    generateMarkdown(profileDetails, runtimeSettings).forEach(md => {
       const filename = `${runtimeSettings.outputRoot}input/pagecontent/StructureDefinition-${md.name}.md`;
       if (!createdFileMap.has(filename)) {
-        util.createFile(filename, md.markdownContents);
+        createFile(filename, md.markdownContents);
         createdFileMap.set(filename, '');
       } else {
         logger.error(`Duplicate file ${filename}`);
@@ -215,14 +217,14 @@ program
     logger.info('');
 
     if (runtimeSettings.exampleMarkdownFile) {
-      util.createFile(
+      createFile(
         path.join(
           runtimeSettings.outputRoot,
           'input',
           'pagecontent',
           runtimeSettings.exampleMarkdownFile
         ),
-        genex.generateExample(runtimeSettings, profileDetails)
+        generateExample(runtimeSettings, profileDetails)
       );
     } else {
       logger.info('No examples.');
