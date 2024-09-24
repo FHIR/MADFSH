@@ -1,6 +1,6 @@
 import * as fs from 'fs';
 import { logger } from './logger';
-import { RuntimeSettings } from './config/settings';
+import { RuntimeSettings } from '../config/settings';
 
 export function createFile(fileName: string, contents: string) {
   try {
