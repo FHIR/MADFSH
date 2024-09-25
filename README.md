@@ -819,6 +819,15 @@ is the `generateMarkdown` function which is the primary entry point for narrativ
 
 #### Generate example content
 
+MADFSH contains some basic example association capabilities. If an example directory is provided,
+then MADFSH will look for FHIR Bundle files in that directory and include both the Bundles and
+the individual resources as examples within the generated IG. It will attempt to associate the
+instances with specific measures based on a MeasureReport instance within the Bundle. At this time
+the logic for associating and sorting examples is not very sophisticated.
+
+The key definition in the [`generateExamples.ts`](src/generation/generateExamples.ts) file 
+is the `generateExample` function which is the primary entry point for example generation.
+
 ## License
 
 Copyright 2024 The MITRE Corporation
