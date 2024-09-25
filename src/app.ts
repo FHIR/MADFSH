@@ -19,7 +19,7 @@ import { generateExample } from './generation/generateExamples';
 import { createFile } from './common/util';
 import { initMADFSHProject } from './scripts/projectTemplate';
 
-const VERSION = '0.5.0';
+const VERSION = '0.5.1';
 
 // Settings are hard coded for now, later to be implemented as CLI params or config.yaml
 const program = new commander.Command();
