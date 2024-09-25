@@ -25,16 +25,14 @@ export function loadMeasureBundle(
     const files = fs.readdirSync(directoryPath);
     files.forEach(function (oneFile) {
       if (oneFile.includes('.json')) {
-        if (filenames.includes(oneFile)) {
-          const json = fs.readFileSync(directoryPath + oneFile, {
-            encoding: 'utf8',
-            flag: 'r'
-          });
-          if (JSON.parse(json).resourceType === 'Bundle') {
-            logger.info('Loading file: ' + oneFile);
-            fileCnt++;
-            jsons.push({ fileName: oneFile, json: json });
-          }
+        const json = fs.readFileSync(directoryPath + oneFile, {
+          encoding: 'utf8',
+          flag: 'r'
+        });
+        if (JSON.parse(json).resourceType === 'Bundle') {
+          logger.info('Loading file: ' + oneFile);
+          fileCnt++;
+          jsons.push({ fileName: oneFile, json: json });
         }
       }
     });
