@@ -34,7 +34,7 @@
         }
     ],
     "measureExtensionURL": "http://hl7.org/fhir/us/measureset/StructureDefinition/used-by-measures",
-    "measureLinkFile": "src/narrative-mappings/measure-link.json",
+    "measureLinkFile": "measure-link.json",
     "valueSetDetails": [],
     "codeDetails": [],
     "elementDetailOverrides": [],
