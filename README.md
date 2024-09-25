@@ -25,7 +25,7 @@ The following options are recommended for use when invoking MADFSH
 
 -   `-c <path>` (or `--config-file <path>`): path to configuration file to use
     on this run
--   `-a <value>` (or `--apikey <value>`): nlm api key for fetching vsac value
+-   `-a <value>` (or `--apikey <value>`): umls api key for fetching vsac value
     set details
 -   `-lu <value>` (or `--loincuser <value>`): LOINC username for fetching LOINC
     code details
@@ -581,10 +581,11 @@ ts-node src/app.ts -n <file-name>
 ## Using external terminology services
 
 MADFSH can use web calls to get VSAC value sets and LOINC code details. To do
-so, NLM API key and LOINC credentials need to be provided as parameters below.
+so, [UMLS API key](https://documentation.uts.nlm.nih.gov/rest/authentication.html)
+and LOINC credentials need to be provided as parameters below.
 
 ``` bash
-ts-node src/app.ts -a "[nlm api key]" -lu "[loinc username]" -lp "[loinc password]"
+ts-node src/app.ts -a "[umls api key]" -lu "[loinc username]" -lp "[loinc password]"
 ```
 
 ## Environment/Dependencies
@@ -608,23 +609,215 @@ changes:
 
 ### High-level Architecture
 
-A MADFSH run proceeds through several steps. The code for each step is more
-or less encapsulated within a single file:
+A MADFSH run proceeds through several steps. The primary code for each step
+lives in a single file:
 
-- Setup (`config` folder)
-  - Load config (`config/settings.ts`)
-  - Load FHIR packages (`config/fhirPackages.ts`)
-- Analysis (`analysis folder`)
-  - Load target measures (`analysis/loadMeasures.ts`)
-  - Aggregate measure requirements (`analysis/aggregateRequirements.ts`)
-  - Gather value set details (`analysis/elementDetails.ts`)
-  - Identify profile elements (`analysis/terminologyDetails.ts`)
-- Generation (`generation` folder)
-  - Generate FSH content (`generation/generateFSH.ts`)
-  - Generate narrative markdown content (`generation/generateNarrative.ts`)
-  - Generate example content (`generate/generateExamples.ts`)
+- Setup ([`config` folder](/src/config))
+  - [Load config](#load-config) 
+    ([`config/settings.ts`](/src/config/settings.ts))
+  - [Load FHIR packages](#load-fhir-packages) 
+    ([`config/fhirPackages.ts`](/src/config/fhirPackages.ts))
+- Analysis ([`analysis folder`](/src/analysis/))
+  - [Load target measures](#load-target-measures)
+    ([`analysis/loadMeasures.ts`](/src/analysis/loadMeasures.ts))
+  - [Aggregate measure requirements](#aggregate-measure-requirements)
+    ([`analysis/aggregateRequirements.ts`](/src/analysis/aggregateRequirements.ts))
+  - [Gather value set details](#gather-value-set-details)
+    ([`analysis/terminologyDetails.ts`](/src/analysis/terminologyDetails.ts))
+  - [Identify profile elements](#identify-profile-elements)
+    ([`analysis/elementDetails.ts`](/src/analysis/elementDetails.ts))
+- Generation ([`generation` folder](/src/generation/))
+  - [Generate FSH content](#generate-fsh-content)
+    ([`generation/generateFSH.ts`](/src/generation/generateFSH.ts))
+  - [Generate narrative markdown content](#generate-narrative-markdown-content)
+    ([`generation/generateNarrative.ts`](/src/generation/generateNarrative.ts))
+  - [Generate example content](#generate-example-content)
+    ([`generate/generateExamples.ts`](/src/generation/generateExamples.ts))
 
-The rest of this section provides a high-level overview of what happens d
+The rest of this section provides a high-level overview of what happens during each step
+
+#### Load config
+
+The first step loads configuration from the [configuration file](#configuration-file-format)
+into a run-time representation. This includes:
+- Converting lists to maps for easy look-up during the analysis and generation steps.
+- Defaulting unconfigured values.
+
+Key definitions in the [`settings.ts`](src/config/settings.ts) file include
+- The type definitions for the static configuration data and the runtime representation.
+- The `settingsToRuntime` function which performs the conversion to the runtime representation.
+
+#### Load FHIR packages
+
+Because generated content will eventually be compiled into an IG using 
+[sushi](https://github.com/FHIR/sushi) and the IG publisher, 
+MADFSH uses the sushi configuration file (`sushi-config.yaml`) to identify dependency
+and FHIR packages to load for use in analysis and generation. This step
+1. Identifies the `sushi-config.yaml` file to use within the **outputRoot** directory.
+2. Finds the [dependency list](https://fshschool.org/docs/sushi/configuration/#dependencies) 
+   within the identified file.
+3. Uses the [fhir-package-loader](https://www.npmjs.com/package/fhir-package-loader) tool
+   to load a javascript representation of the FHIR dependencies in a searchable construct.
+4. Adds the FHIR depencies to the runtime settings object.
+
+The key definition in the [`fhirPackages.ts`](src/config/fhirPackages.ts) file is
+the `identifyAndLoadDependencyPackages` function which contains the root logic for
+FHIR package loading.
+
+#### Load target measures
+
+To start the analysis step, the target measures are loaded from file. Files in the
+**inputRoot** directory that meet the following criteria are loaded:
+
+1. Have a `.json` extension.
+2. Are parseable json with a top-level object that has a `resourceType` member
+   with the value `Bundle`.
+3. If an **inputFileList** was provided, the filename appears in that list.
+
+For each file that meets those criteria, the raw json is loaded and used for the
+rest of the processing steps.
+
+The key definition in the [`loadMeasures.ts`](src/analysis/loadMeasures.ts) file is
+the `loadMeasureBundle` function which performs the load and verification.
+
+#### Aggregate measure requirements
+
+Data requirements are extracted from the loaded measures and combined into a single
+aggregated set of data requirements. To find the data requirements within a single
+Measure bundle loaded in the previous step, MADFSH will
+1. Find the unique `Measure` instance within the `Bundle`. If multiple are found, 
+   an error will be logged, but the last one found will be used.
+2. Use the `id` element of the `Measure` instance to find a `Library` instance
+   with the same `id` element value within the `Bundle`. If the `Measure` instance
+   identified did not have an `id` element, then all `Library` instances in the 
+   `Bundle` will be loaded.
+3. For each `Library` instance, each `dataRequirement` entry is processed. If the
+   target profile is already included in the aggregated requirements, that entry is augmented with
+   the additional elements and filters in this data requirement. Otherwise, a
+   new entry for the profile is added to the aggregated requirements.
+
+As a part of this processing, 
+- Each unique data requirement, as well as unique filters on a particular data element
+  will be linked to the measures that use it so that this information can be used for
+  content generation.
+- Code and value set filters will be normalized and those
+  that do not meet minimum requirements will be flagged in the console output and excluded.
+  
+The resulting set of aggregated data requirements are passed on for further analysis
+and generation steps. If the **createDataReqJSON** configuration flag is set, then the
+aggregated requirements are also exported to the `aggr-data-require.json` local file
+for examination and debugging.
+
+The key definitions in the [`aggregateRequirements.ts`](src/analysis/aggregateRequirements.ts) file 
+include:
+- internal types for data requirements and filters
+- the `reorgDataRequirementWithMeasure` function which performs the identification and aggregation
+  of the data requirements.
+
+#### Gather value set details
+
+Some filters within the data requirements mandate certain codes or codes from identified
+value sets. However, these specifications don't come with enough
+details to generate a human-readable narrative, such as the value set or code name. In order
+to obtain this information, MADFSH will request it from a relevant terminology server. MADFSH
+supports gathering this information from the following sources:
+- Codes
+  - *The **codeDetails** configuration setting*: if code details will not be available
+    from a supported external source, they can be provided within the configuration file.
+  - *LOINC*: details for codes with the `http://loinc.org` system will be fetched from the
+    LOINC terminology server. Use of this terminology server requires a LOINC
+    [account](https://loinc.org/wp-login.php), which must be provided at MADFSH execution time
+    (see the [Using external terminology services](#using-external-terminology-services) section).
+  - *SNOMED*: details for codes with the `http://snomed.info/sct` system will be fetched from
+    HL7's public terminology server `tx.fhir.org`.
+- Value Sets
+  - *The **valueSetDetails** configuration setting*: if value set details will not be available
+    from a supported external source, they can be provided within the configuration file.
+  - *VSAC*: The National Library of Medicine's Value Set Authority Center (VSAC) hosts the definitions
+    for value sets used in the Centers for Medicare & Medicaid Services (CMS) electronic Clinical
+    Quality Measures (eCQMs). Value sets containing `cts.nlm.nih.gov/fhir` in their url will be 
+    considered VSAC value sets. To gather value set details using the VSAC API, a 
+    [UMLS API Key](https://documentation.uts.nlm.nih.gov/rest/authentication.html) must be
+    provided at MADFSH execution time (see the 
+    [Using external terminology services](#using-external-terminology-services) section).
+
+If no code or value set details are found for a given entry, a default is used that contains
+basic details, but won't be very human-readable. In this case, a warning is logged to the
+output console so that issues causing the ommission can be resolved, e.g., by providing
+the necessary credentials or adding details within the configuration.
+
+The key definition in the [`terminologyDetails.ts`](src/analysis/terminologyDetails.ts) file 
+is the `fetchValueSetAndCodeDetails` function which is the primary entry point and which 
+delegates to helper functions.
+
+#### Identify profile elements
+
+This step contains the primary logic for determining what the generated profiles will look like.
+Most decisions, such as about which profiles to generate and which elements go into a profile's
+narrative element list, get made within this step. The following generation steps simply create
+output based on those decisions.
+
+Specifically, in this step MADFSH prepares to create a new profile of each parent profile
+identified within the aggregated data requirements. It does so over three steps:
+1. *Map the data requirements to their formal FHIR definitions*: IG generation will fail if
+   sushi or the publisher cannot find the profile or element definitions referenced. Thus, MADFSH
+   checks these details beforehand so that it is confident that the generated IG will be successfully
+   generated by those tools. This involves
+   - finding the profile referenced in the data requirements to extend within the list of 
+     [loaded fhir dependencies](#load-fhir-packages)
+   - finding the definition of each referenced element within that profile's StructureDefinition
+2. *Add inherited details*: Inherited must support elements typically get included in the list of 
+   narrative elements, so these are identified for later use.
+3. *Identify narrative elements*: Elements used in measures and inherited must supports are
+   included in a narrative list of key elements. This sub-step finds these elements and
+   identifies the content to use for describing the element in the narrative. This includes
+   looking for alternative descriptions to use instead of the default element short description.
+
+
+The key definitions in the [`elementDetails.ts`](src/analysis/elementDetails.ts) file 
+include:
+- function `prepareElementDetails` is the root entry point for this analysis step.
+- function `dataReqsToProfileDetail` is responsible for mapping data requirement profile
+  entries onto the FHIR StructureDefinition and checking that each required element 
+  exists within the profile.
+- method `identifyElementsForNarrative` is responsible for identifying narrative elements
+  and also for determining what the narrative description for the element will be.
+- primary code filter details in constants `KeyFilterElementForResourceType` and
+  `ResourceTypesWithoutKeyFilterElements`. See comment on those constants for more
+  details.
+
+#### Generate FSH content
+
+The FSH generation step uses the decisions made in the [Identify profile elements](#identify-profile-elements)
+step to create FHIR Shorthand representations of the profiles for the generated IG.
+These each extend a profile referenced in the data requirements and contain
+element declarations for each element associated with that profile. The code handles
+adding all of the specific modifications to those elements including:
+- a prefix on the short description
+- a must support flag
+- a suffix on the description with the list of measures that use the element
+- extensions around
+  - measures that use the element
+  - associated value sets.
+
+The key definition in the [`generateFSH.ts`](src/generation/generateFSH.ts) file 
+is the `generateFSH` function which is the primary entry point for FSH generation.
+
+#### Generate narrative markdown content
+
+The narrative generation step uses the decisions made in the [Identify profile elements](#identify-profile-elements)
+step to create narrative content for each profile in markdown format. Specifically, it
+creates two markdown files for the profile:
+- a intro file (StructureDefinition-[profile id]-intro.md) that includes the list of measures that use
+  the profile and the key elements, broken out into elements used by measures and additional interop
+  requirements inherited from the parent profile. This gets put at the top of the profile page.
+- a notes file (StructureDefinition-[profile id]-notes.md) that includes value set and code details
+  as well as a summary table of relevant element details. This gets put at the end of the profile page.
+
+The key definition in the [`generateNarrative.ts`](src/generation/generateNarrative.ts) file 
+is the `generateMarkdown` function which is the primary entry point for narrative generation.
+
+#### Generate example content
 
 ## License
 

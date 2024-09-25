@@ -96,6 +96,7 @@ program
     logger.info('*      Measure Set to FSH Converter      *');
     logger.info('******************************************');
     logger.info(`Version: ${VERSION}`);
+    logger.info(path.join(__dirname, "locale"))
 
     const options = program.opts();
     let executionDetailsString = `VERSION: ${VERSION}\nRun At: ${new Date().toISOString()}`;
