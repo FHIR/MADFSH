@@ -1,0 +1,7 @@
+.vscode
+coverage
+dist
+build*
+node_modules
+regression/output
+**/generated
