@@ -135,7 +135,6 @@ async function fetchOneCodeDetail(
 }
 
 async function fetchSnomedCodeDetail(code: string) {
-  //const fetchUrl = `https://snomednz.digital.health.nz/fhir/CodeSystem/$lookup?system=http://snomed.info/sct&code=${code}`;
   const fetchUrl = `https://tx.fhir.org/r4/CodeSystem/$lookup?system=http://snomed.info/sct&code=${code}`;
   try {
     const fetchedDetails = await axios.get<fhir4.Parameters>(fetchUrl, {

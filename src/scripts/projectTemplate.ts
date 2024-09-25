@@ -1,7 +1,7 @@
-import * as util from './common/util';
+import * as util from '../common/util';
 import path from 'path';
 import * as fs from 'fs';
-import { logger } from './common/logger';
+import { logger } from '../common/logger';
 
 const template_root = 'project_template';
 
