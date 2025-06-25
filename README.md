@@ -830,7 +830,7 @@ is the `generateExample` function which is the primary entry point for example g
 
 ## License
 
-Copyright 2024 The MITRE Corporation
+Copyright 2025 The MITRE Corporation
 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
@@ -850,8 +850,8 @@ No other use other than that granted to the U. S. Government, or to those acting
 
 For further information, please contact The MITRE Corporation, Contracts Management Office, 7515 Colshire Drive, McLean, VA  22102-7539, (703) 983-6000.
 
-(c) 2024 The MITRE Corporation.
+(c) 2025 The MITRE Corporation.
 
 ---
 
-MITRE: Approved for Public Release; Distribution Unlimited. Public Release Case Number 24-0433
+MITRE: Approved for Public Release; Distribution Unlimited. Public Release Case Number 24-3846
