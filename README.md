@@ -17,7 +17,7 @@ This project is maintained by the MITRE Corporation.
 For MADFSH issues, visit the [MADFSH GitHub Issues page](https://github.com/FHIR/MADFSH/issues).
 
 ### License
-All contributions to this project will be released under the Apache 2.0 License; see https://github.com/FHIR/MADFSH#license
+All contributions to this project will be released under the Apache 2.0 License; see https://github.com/FHIR/MADFSH?tab=readme-ov-file#license-1
 
 ### Contribution Policy
 The MADFSH Contribution Policy can be found in [CONTRIBUTING.md](CONTRIBUTING.md).
