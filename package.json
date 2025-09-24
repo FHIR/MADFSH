@@ -7,10 +7,15 @@
         "create-narrative-mapping": "ts-node ./src/scripts/createNarrativeMapping.ts",
         "lint": "eslint \"./src/**/*.{js,ts}\"",
         "lint:fix": "eslint \"./src/**/*.{js,ts}\" --fix",
-        "prettier-format": "prettier --config .prettierrc 'src/**/*.ts' --write",
+        "prettier": "prettier --config .prettierrc 'src/**/*.ts' --check",
+        "prettier:fix": "prettier --config .prettierrc 'src/**/*.ts' --write",
         "start:build": "tsc -w",
         "start:run": "nodemon build/app.js",
-        "start": "concurrently npm:start:*"
+        "start": "concurrently npm:start:*",
+        "test": "jest --forceExit"
+    },
+    "jest": {
+        "preset": "ts-jest"
     },
     "keywords": [],
     "author": "",
@@ -18,13 +23,17 @@
     "devDependencies": {
         "@eslint/js": "^9.10.0",
         "@types/eslint__js": "^8.42.3",
+        "@types/jest": "^29.5.14",
+        "@types/mock-fs": "^4.13.4",
         "@types/node": "^20.12.7",
         "@typescript-eslint/eslint-plugin": "^6.10.0",
         "@typescript-eslint/parser": "^6.10.0",
         "eslint": "^8.57.1",
         "eslint-config-prettier": "^9.0.0",
+        "jest": "^29.7.0",
         "prettier": "^3.0.3",
-        "typescript": "^5.6.2",
+        "ts-jest": "^29.2.5",
+        "typescript": "^5.7.3",
         "typescript-eslint": "^8.6.0"
     },
     "dependencies": {
@@ -37,6 +46,7 @@
         "fp-ts": "^2.16.1",
         "fs": "^0.0.1-security",
         "httprequest": "^0.3.0",
+        "mock-fs": "^5.4.1",
         "node-fetch": "^3.3.2",
         "path": "^0.12.7",
         "sync-request": "^6.1.0",
@@ -44,5 +54,8 @@
         "ts-sync-request": "^1.4.1",
         "winston": "^3.11.0",
         "yaml": "^2.3.4"
+    },
+    "engines": {
+        "node": ">=22.0.0 <23.0.0"
     }
 }

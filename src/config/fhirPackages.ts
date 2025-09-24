@@ -3,7 +3,7 @@ import * as fs from 'fs';
 import path from 'path';
 import { FHIRDefinitions, fpl } from 'fhir-package-loader';
 import YAML from 'yaml';
-import {RuntimeSettings} from './settings';
+import { RuntimeSettings } from './settings';
 
 export async function identifyAndLoadDependencyPackages(settings: RuntimeSettings) {
   const sushiConfigPath = findSushiConfig(settings.outputRoot);
@@ -45,7 +45,7 @@ function extractIGDependenciesFromSushiConfig(sushiConfigPath: string): string[]
     switch (parsed.fhirVersion) {
       case '4.0.1':
         dependencyList.push('hl7.fhir.r4.core@4.0.1');
-        logger.info('found dependency hl7.fhir.r4.core@4.0.1')
+        logger.info('found dependency hl7.fhir.r4.core@4.0.1');
         break;
       case undefined:
         logger.warn('no FHIR core version found to include in dependencies');
@@ -60,9 +60,9 @@ function extractIGDependenciesFromSushiConfig(sushiConfigPath: string): string[]
       logger.warn('no ig dependencies found in sushi-config file');
     }
     sushiDependencies.forEach(([key, dependency]: [string, any]) => {
-      const version = typeof dependency === "string" ? dependency : dependency.version;
-      logger.info(`found dependency ${key}@${version}`)
-      dependencyList.push(`${key}@${version}`)
+      const version = typeof dependency === 'string' ? dependency : dependency.version;
+      logger.info(`found dependency ${key}@${version}`);
+      dependencyList.push(`${key}@${version}`);
     });
   } catch (error) {
     logger.error(`Error parsing configuration: ${error}.`);

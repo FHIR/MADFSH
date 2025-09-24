@@ -3,11 +3,7 @@ import path from 'path';
 import { logger } from './common/logger';
 import { resolve } from 'path';
 import * as fs from 'fs';
-import {
-  Settings,
-  settingsToRuntime,
-  loadSettingsFile
-} from './config/settings';
+import { Settings, settingsToRuntime, loadSettingsFile } from './config/settings';
 import { identifyAndLoadDependencyPackages } from './config/fhirPackages';
 import { loadMeasureBundle } from './analysis/loadMeasures';
 import { reorgDataRequirementWithMeasure } from './analysis/aggregateRequirements';
@@ -96,7 +92,7 @@ program
     logger.info('*      Measure Set to FSH Converter      *');
     logger.info('******************************************');
     logger.info(`Version: ${VERSION}`);
-    logger.info(path.join(__dirname, "locale"))
+    logger.info(path.join(__dirname, 'locale'));
 
     const options = program.opts();
     let executionDetailsString = `VERSION: ${VERSION}\nRun At: ${new Date().toISOString()}`;
@@ -144,10 +140,7 @@ program
     logger.info('*******************************************************');
     logger.info('');
 
-    const bundles = loadMeasureBundle(
-      runtimeSettings.inputRoot,
-      runtimeSettings.inputFileList
-    );
+    const bundles = loadMeasureBundle(runtimeSettings.inputRoot, runtimeSettings.inputFileList);
 
     logger.info('');
     logger.info('*******************************************************');

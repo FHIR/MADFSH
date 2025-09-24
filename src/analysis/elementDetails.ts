@@ -1,6 +1,6 @@
 import { logger } from '../common/logger';
 import { DataReqOutputs } from './aggregateRequirements';
-import { RuntimeSettings, ValueSetDetails, CodeDetails } from '../config/settings';
+import { RuntimeSettings } from '../config/settings';
 import request from 'sync-request';
 import { StructureDefinition } from 'fhir/r4';
 

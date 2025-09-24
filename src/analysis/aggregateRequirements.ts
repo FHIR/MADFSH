@@ -79,7 +79,7 @@ export function reorgDataRequirementWithMeasure(
           entry.resource?.resourceType === 'Library' &&
           (measureId.length === 0 || measureId === entry.resource?.id)
         ) {
-          logger.info(`**** Processing data requirements in library with id ${entry.resource!.id}`);
+          logger.info(`**** Processing data requirements in library with id ${entry.resource?.id}`);
 
           entry.resource.dataRequirement?.forEach(item => {
             if (item.profile) {
@@ -116,7 +116,7 @@ export function reorgDataRequirementWithMeasure(
                 }
               }
 
-              if (!dataReqOutputs.some(out => out.profile.includes(p))) {
+              if (!dataReqOutputs.some(out => out.profile === p)) {
                 // Add a new profile based Data requirement output
                 const ms_ext: { extension: Extension[] }[] = [];
                 item.mustSupport?.forEach(function () {
