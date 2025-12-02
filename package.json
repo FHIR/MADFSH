@@ -38,7 +38,7 @@
     },
     "dependencies": {
         "@ahryman40k/ts-fhir-types": "^4.0.39",
-        "@angular/common": "^16.2.10",
+        "@angular/common": "^21.0.2",
         "@types/fhir": "^0.0.37",
         "axios": "^1.6.2",
         "commander": "^11.1.0",
