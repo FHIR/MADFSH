@@ -42,7 +42,7 @@
         "@types/fhir": "^0.0.37",
         "axios": "^1.6.2",
         "commander": "^11.1.0",
-        "fhir-package-loader": "^1.0.0",
+        "fhir-package-loader": "^2.2.2",
         "fp-ts": "^2.16.1",
         "fs": "^0.0.1-security",
         "httprequest": "^0.3.0",
@@ -54,6 +54,9 @@
         "ts-sync-request": "^1.4.1",
         "winston": "^3.11.0",
         "yaml": "^2.3.4"
+    },
+    "overrides": {
+        "diff": "^8.0.3"
     },
     "engines": {
         "node": ">=22.0.0 <23.0.0"
