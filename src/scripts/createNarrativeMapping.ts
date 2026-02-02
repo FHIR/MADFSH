@@ -7,7 +7,7 @@ const directoryPath = path.join(__dirname, '../../us-core-descriptions/');
 const fileNames = fs.readdirSync(directoryPath);
 fileNames.forEach(file => {
   const profileName = file.split('descriptions-')[1].replace('.json', '');
-   
+
   const descriptions = require(
     path.resolve(path.join(__dirname, '../../us-core-descriptions/', file))
   ) as Record<string, string>;

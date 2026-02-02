@@ -456,7 +456,7 @@ export async function prepareElementDetails(
   logger.info('');
 
   // 3. determine if part of the narrtive list, and if so add narrative descriptions and display details
-   
+
   const narrativeDescriptions = require(narrativeDescriptionsPath) as Record<
     string,
     Record<string, string>
