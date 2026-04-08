@@ -59,7 +59,8 @@
     },
     "overrides": {
         "diff": "^8.0.3",
-        "minimatch": "^3.1.4"
+        "minimatch": "^3.1.4",
+        "brace-expansion": "^1.1.13"
     },
     "engines": {
         "node": ">=22.0.0 <23.0.0"
