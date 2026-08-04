@@ -39,7 +39,7 @@
     },
     "dependencies": {
         "@ahryman40k/ts-fhir-types": "^4.0.39",
-        "@angular/common": "^21.0.2",
+        "@angular/common": "^21.2.19",
         "@types/fhir": "^0.0.37",
         "axios": "^1.6.2",
         "better-npm-audit": "^3.11.0",
@@ -58,19 +58,19 @@
         "yaml": "^2.3.4"
     },
     "overrides": {
-        "fast-uri": "^3.1.4",
+        "fast-uri": "^3.1.5",
         "js-yaml": "^4.3.0",
         "tar": "^7.5.19",
         "minimatch@3.1.5": {
-            "brace-expansion": "^1.1.16"
+            "brace-expansion": "^1.1.18"
         },
         "minimatch@10.2.5": {
-            "brace-expansion": "^5.0.7"
+            "brace-expansion": "^5.0.9"
         },
         "@typescript-eslint/typescript-estree@6.21.0": {
             "minimatch": {
                 ".": "^9.0.9",
-                "brace-expansion": "^2.1.2"
+                "brace-expansion": "^2.1.4"
             }
         }
     },
