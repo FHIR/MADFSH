@@ -39,7 +39,7 @@
     },
     "dependencies": {
         "@ahryman40k/ts-fhir-types": "^4.0.39",
-        "@angular/common": "^21.2.19",
+        "@angular/common": "^21.2.23",
         "@types/fhir": "^0.0.37",
         "axios": "^1.6.2",
         "better-npm-audit": "^3.11.0",
@@ -60,7 +60,7 @@
     "overrides": {
         "browserslist": "^4.28.7",
         "fast-uri": "^3.1.6",
-        "js-yaml": "^4.3.1",
+        "js-yaml": "^4.3.2",
         "qs": "^6.16.0",
         "tar": "^7.5.19",
         "minimatch@3.1.5": {
