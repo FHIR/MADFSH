@@ -1,1 +1,7 @@
-{}
+{
+    "GHSA-gcqx-w48m-w2h4": {
+        "active": true,
+        "notes": "CVE-2026-93753 was rejected by its CNA on 2026-11-02 because it does not describe a security vulnerability. Remove this exception once npm's advisory feed reflects the rejection. Source: https://raw.githubusercontent.com/CVEProject/cvelistV5/main/cves/2026/93xxx/CVE-2026-93753.json",
+        "expiry": "2027-02-09"
+    }
+}
